@@ -20,11 +20,19 @@ class LikeTopBarFragment : Fragment(R.layout.fragment_like_top_bar) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentLikeTopBarBinding.bind(view)
+
+        initFragment()
+        mainTabSelectListener()
+    }
+
+    private fun initFragment(){
         likeCodyFragment = LikeCodyFragment()
         likeProductFragment = LikeProductFragment()
         likeStoreFragment = LikeStoreFragment()
 
         (activity as MainActivity).mainFragmentReplace(likeProductFragment)
+    }
+    private fun mainTabSelectListener(){
         binding.MainTab.addOnTabSelectedListener(object: TabLayout.OnTabSelectedListener{
             override fun onTabSelected(tab: TabLayout.Tab) {
                 when(tab.position){
