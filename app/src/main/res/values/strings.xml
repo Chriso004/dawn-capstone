@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">DawnProject</string>
+    <string name="menu_home_title">홈</string>
+    <string name="menu_category_title">카테고리</string>
+    <string name="menu_home_avatar">아바타</string>
+    <string name="menu_like_title">좋아요</string>
+    <string name="menu_myPage_title">마이페이지</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
