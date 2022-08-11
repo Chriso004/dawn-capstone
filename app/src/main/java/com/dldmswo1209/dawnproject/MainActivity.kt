@@ -20,13 +20,19 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        initFragment()
+        bottomNavigationViewItemSelectedListener()
+
+    }
+    private fun initFragment(){
         mainTopBarFragment = MainTopBarFragment()
         likeTopBarFragment = LikeTopBarFragment()
         myPageTopBarFragment = MyPageTopBarFragment()
         myPageFragment = MyPageFragment()
         topFragmentReplace(mainTopBarFragment)
+    }
 
-
+    private fun bottomNavigationViewItemSelectedListener(){
         binding.bottomNavigationView.setOnItemSelectedListener {
             when(it.itemId){
                 R.id.home -> topFragmentReplace(mainTopBarFragment)
@@ -40,9 +46,7 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
-
     }
-
     fun topFragmentReplace(fragment: Fragment){
         supportFragmentManager.beginTransaction()
             .replace(R.id.topContainerView, fragment)

@@ -26,19 +26,11 @@ class MainTopBarFragment : Fragment(R.layout.fragment_top_bar) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentTopBarBinding.bind(view)
-        homeFragment = HomeFragment()
-        bestFragment = BestFragment()
-        recommendFragment = RecommendFragment()
-        codyFragment = CodyFragment()
-        brandFragment = BrandFragment()
-        shopFragment = ShopFragment()
-        saleFragment = SaleFragment()
-        newProductFragment = NewProductFragment()
-        eventFragment = EventFragment()
-        storeFragment = StoreFragment()
+        initFragment()
+        mainTabSelectListener()
 
-        (activity as MainActivity).mainFragmentReplace(homeFragment)
-
+    }
+    private fun mainTabSelectListener(){
         binding.MainTab.addOnTabSelectedListener(object: TabLayout.OnTabSelectedListener{
             override fun onTabSelected(tab: TabLayout.Tab) {
                 when(tab.position){
@@ -79,7 +71,20 @@ class MainTopBarFragment : Fragment(R.layout.fragment_top_bar) {
 
             override fun onTabReselected(tab: TabLayout.Tab?) {}
         })
+    }
+    private fun initFragment(){
+        homeFragment = HomeFragment()
+        bestFragment = BestFragment()
+        recommendFragment = RecommendFragment()
+        codyFragment = CodyFragment()
+        brandFragment = BrandFragment()
+        shopFragment = ShopFragment()
+        saleFragment = SaleFragment()
+        newProductFragment = NewProductFragment()
+        eventFragment = EventFragment()
+        storeFragment = StoreFragment()
 
+        (activity as MainActivity).mainFragmentReplace(homeFragment)
     }
 
 }
