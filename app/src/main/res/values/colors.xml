@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="background">#FFFFFF</color>
     <color name="dawnColor">#33BFBE</color>
+    <color name="titleColor_black">#000000</color>
 </resources>
