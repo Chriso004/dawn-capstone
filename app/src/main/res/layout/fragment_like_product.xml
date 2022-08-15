@@ -6,95 +6,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainTopMenuItems.HomeFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/like_top_bar"
-        android:layout_width="match_parent"
-        android:layout_height="140dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
-        <TextView
-            android:id="@+id/titleLike"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="좋아요"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            android:textSize="25sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="55dp"
-            android:layout_marginStart="22dp"/>
-
-        <ImageView
-            android:id="@+id/basketButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/icon_basket"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/titleLike"
-            app:layout_constraintBottom_toBottomOf="@id/titleLike"
-            android:layout_marginEnd="25dp"/>
-
-        <ImageView
-            android:id="@+id/searchButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/icon_search"
-            app:layout_constraintEnd_toStartOf="@id/basketButton"
-            app:layout_constraintTop_toTopOf="@id/titleLike"
-            app:layout_constraintBottom_toBottomOf="@id/titleLike"
-            android:layout_marginEnd="30dp"/>
-
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/MainTab"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:tabTextColor="@color/black"
-            app:tabIndicatorColor="@color/dawnColor"
-            app:tabSelectedTextColor="@color/dawnColor"
-            app:tabRippleColor="@null"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="상품"/>
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="스토어"/>
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="코디"/>
-
-        </com.google.android.material.tabs.TabLayout>
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/productitem"
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/like_top_bar"
+        android:text="좋아요_상품"
+        android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
-
-        android:background="@color/purple_200">
-    </androidx.recyclerview.widget.RecyclerView>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="0dp"
-        android:layout_height="89dp"
-        app:menu="@menu/bottom_navigation_menu"
-        app:itemIconTint="@drawable/selector_menu"
-        app:itemRippleColor="@null"
-        app:labelVisibilityMode="unlabeled"
-        app:itemIconSize="45dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
