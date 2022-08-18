@@ -1,21 +1,11 @@
 package com.dldmswo1209.dawnproject.adapter
 
-import android.content.Context
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
-import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import androidx.viewpager2.widget.ViewPager2
-import com.dldmswo1209.dawnproject.MainActivity
-import com.dldmswo1209.dawnproject.MainTopMenuItems.HomeBannerFragment
 import com.dldmswo1209.dawnproject.MainTopMenuItems.TodaySaleFragment
 import com.dldmswo1209.dawnproject.R
 import com.dldmswo1209.dawnproject.dataClass.TodaySaleItem
-import java.net.URI
 
 class TodaySaleViewPagerAdapter(
     fragmentActivity: FragmentActivity,

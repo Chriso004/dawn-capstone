@@ -24,7 +24,7 @@
 
                 <ImageView
                     android:id="@+id/item1ImageView"
-                    android:layout_width="180dp"
+                    android:layout_width="170dp"
                     android:layout_height="180dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/test_image" />
@@ -54,17 +54,23 @@
                 android:ellipsize="end"
                 android:maxEms="10"/>
 
-            <TextView
-                android:id="@+id/item1SaleTextView"
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="23%"/>
-            <TextView
-                android:id="@+id/item1PriceTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="2dp"
-                android:text="76,500"/>
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/item1SaleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23%"/>
+                <TextView
+                    android:id="@+id/item1PriceTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:text="76,500"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -80,7 +86,7 @@
 
                 <ImageView
                     android:id="@+id/item2ImageView"
-                    android:layout_width="180dp"
+                    android:layout_width="170dp"
                     android:layout_height="180dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/test_image2" />
@@ -110,17 +116,23 @@
                 android:ellipsize="end"
                 android:maxEms="10"/>
 
-            <TextView
-                android:id="@+id/item2SaleTextView"
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="23%"/>
-            <TextView
-                android:id="@+id/item2PriceTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="2dp"
-                android:text="76,500"/>
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/item2SaleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23%"/>
+                <TextView
+                    android:id="@+id/item2PriceTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:text="76,500"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -145,7 +157,7 @@
 
                 <ImageView
                     android:id="@+id/item3ImageView"
-                    android:layout_width="180dp"
+                    android:layout_width="170dp"
                     android:layout_height="180dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/test_image" />
@@ -174,18 +186,22 @@
                 android:maxLines="1"
                 android:ellipsize="end"
                 android:maxEms="10"/>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/item3SaleTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="23%"/>
-            <TextView
-                android:id="@+id/item3PriceTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="2dp"
-                android:text="76,500"/>
+                <TextView
+                    android:id="@+id/item3SaleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23%"/>
+                <TextView
+                    android:id="@+id/item3PriceTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:text="76,500"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -201,7 +217,7 @@
 
                 <ImageView
                     android:id="@+id/item4ImageView"
-                    android:layout_width="180dp"
+                    android:layout_width="170dp"
                     android:layout_height="180dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/test_image" />
@@ -231,17 +247,22 @@
                 android:ellipsize="end"
                 android:maxEms="10"/>
 
-            <TextView
-                android:id="@+id/item4SaleTextView"
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="23%"/>
-            <TextView
-                android:id="@+id/item4PriceTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="2dp"
-                android:text="76,500"/>
+            android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/item4SaleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23%"/>
+                <TextView
+                    android:id="@+id/item4PriceTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:text="76,500"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
