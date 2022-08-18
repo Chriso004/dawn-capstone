@@ -28,7 +28,6 @@ class CodyFragment : Fragment(R.layout.fragment_cody) {
                     R.id.newProduct -> filterStr += "최신순/"
                 }
                 filterStr += "스타일(${styleList.size})"
-                Toast.makeText(context, filterStr, Toast.LENGTH_SHORT).show()
                 binding.filterName.text = filterStr
             }
             codyFilterFragment.show(parentFragmentManager, codyFilterFragment.tag)

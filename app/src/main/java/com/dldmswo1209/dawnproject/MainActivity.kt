@@ -3,6 +3,10 @@ package com.dldmswo1209.dawnproject
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import androidx.viewpager2.adapter.FragmentStateAdapter
+import androidx.viewpager2.widget.ViewPager2
+import com.dldmswo1209.dawnproject.MainTopMenuItems.*
 import com.dldmswo1209.dawnproject.databinding.ActivityMainBinding
 import com.dldmswo1209.dawnproject.myPage.MyPageFragment
 import com.dldmswo1209.dawnproject.topFragment.LikeTopBarFragment
@@ -22,6 +26,8 @@ class MainActivity : AppCompatActivity() {
 
         initFragment()
         bottomNavigationViewItemSelectedListener()
+
+
 
     }
     private fun initFragment(){
@@ -57,5 +63,6 @@ class MainActivity : AppCompatActivity() {
             .replace(R.id.mainContainerView, fragment)
             .commit()
     }
+
 
 }
