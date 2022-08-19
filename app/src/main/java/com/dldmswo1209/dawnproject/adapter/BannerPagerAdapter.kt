@@ -13,6 +13,7 @@ class BannerPagerAdapter(
     inner class ViewHolder(val binding: HomeBannerItemBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(image: Int){
             binding.bannerImageView.setImageResource(image)
+
         }
 
     }
