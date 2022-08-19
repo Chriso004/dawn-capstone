@@ -21,12 +21,15 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/advertisement_item.xml" value="0.29375" />
+        <entry key="app/src/main/res/layout/best_product_item.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/brand_cody_rank_item.xml" value="0.30885416666666665" />
+        <entry key="app/src/main/res/layout/cody_banner_item.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/cody_item.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/fragment_age_option.xml" value="0.2947916666666667" />
-        <entry key="app/src/main/res/layout/fragment_best.xml" value="0.2784126613451087" />
+        <entry key="app/src/main/res/layout/fragment_best.xml" value="0.24731182795698925" />
         <entry key="app/src/main/res/layout/fragment_brand.xml" value="0.2947916666666667" />
         <entry key="app/src/main/res/layout/fragment_brand_shop_option.xml" value="0.2947916666666667" />
-        <entry key="app/src/main/res/layout/fragment_cody.xml" value="0.2864496866861979" />
+        <entry key="app/src/main/res/layout/fragment_cody.xml" value="0.2741968790690104" />
         <entry key="app/src/main/res/layout/fragment_cody_filter.xml" value="0.23740285237630204" />
         <entry key="app/src/main/res/layout/fragment_day_switch_option.xml" value="0.28072916666666664" />
         <entry key="app/src/main/res/layout/fragment_event.xml" value="0.28072916666666664" />
@@ -39,7 +42,7 @@
         <entry key="app/src/main/res/layout/fragment_my_page.xml" value="0.1766304347826087" />
         <entry key="app/src/main/res/layout/fragment_my_page_top_bar.xml" value="0.1766304347826087" />
         <entry key="app/src/main/res/layout/fragment_new_product.xml" value="0.28072916666666664" />
-        <entry key="app/src/main/res/layout/fragment_recommend.xml" value="0.2947916666666667" />
+        <entry key="app/src/main/res/layout/fragment_recommend.xml" value="0.2169811320754717" />
         <entry key="app/src/main/res/layout/fragment_sale.xml" value="0.28072916666666664" />
         <entry key="app/src/main/res/layout/fragment_shop.xml" value="0.28072916666666664" />
         <entry key="app/src/main/res/layout/fragment_store.xml" value="0.2947916666666667" />
@@ -48,7 +51,12 @@
         <entry key="app/src/main/res/layout/home_banner_item.xml" value="0.30885416666666665" />
         <entry key="app/src/main/res/layout/home_category_item.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/product_rank_item.xml" value="0.30885416666666665" />
+        <entry key="app/src/main/res/layout/recommend_brand_item.xml" value="0.30885416666666665" />
+        <entry key="app/src/main/res/layout/recommend_brand_product_item.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/recommend_category_item.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/recommend_item.xml" value="0.2418478260869565" />
+        <entry key="app/src/main/res/layout/recommend_product_item.xml" value="0.2418478260869565" />
+        <entry key="app/src/main/res/layout/test.xml" value="0.22305094401041664" />
         <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.3098958333333333" />
       </map>
     </option>

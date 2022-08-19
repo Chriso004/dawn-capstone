@@ -4,11 +4,10 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import com.dldmswo1209.dawnproject.R
-import com.dldmswo1209.dawnproject.adapter.TodaySaleViewPagerAdapter
-import com.dldmswo1209.dawnproject.dataClass.TodaySaleItem
+import com.dldmswo1209.dawnproject.dataClass.ProductItem
 import com.dldmswo1209.dawnproject.databinding.FragmentTodaySaleBinding
 
-class TodaySaleFragment(val items: MutableList<TodaySaleItem>) : Fragment(R.layout.fragment_today_sale) {
+class TodaySaleFragment(val items: MutableList<ProductItem>) : Fragment(R.layout.fragment_today_sale) {
     private lateinit var binding: FragmentTodaySaleBinding
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

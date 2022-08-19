@@ -8,11 +8,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.dldmswo1209.dawnproject.dataClass.CategoryItem
 import com.dldmswo1209.dawnproject.dataClass.CodyRankItem
 import com.dldmswo1209.dawnproject.databinding.BrandCodyRankItemBinding
+import com.dldmswo1209.dawnproject.databinding.CodyItemBinding
 import com.dldmswo1209.dawnproject.databinding.HomeCategoryItemBinding
 
 
-class CodyRankListAdapter: ListAdapter<CodyRankItem,CodyRankListAdapter.ViewHolder>(diffUtil) {
-    inner class ViewHolder(private val binding: BrandCodyRankItemBinding): RecyclerView.ViewHolder(binding.root){
+class CodyListAdapter: ListAdapter<CodyRankItem,CodyListAdapter.ViewHolder>(diffUtil) {
+    inner class ViewHolder(private val binding: CodyItemBinding): RecyclerView.ViewHolder(binding.root){
         fun bind(codyRankItem :CodyRankItem){
             binding.imageView.setImageResource(codyRankItem.image)
             binding.brandTextView.text = codyRankItem.brand
@@ -27,7 +28,7 @@ class CodyRankListAdapter: ListAdapter<CodyRankItem,CodyRankListAdapter.ViewHold
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(BrandCodyRankItemBinding.inflate(LayoutInflater.from(parent.context),parent, false))
+        return ViewHolder(CodyItemBinding.inflate(LayoutInflater.from(parent.context),parent, false))
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {

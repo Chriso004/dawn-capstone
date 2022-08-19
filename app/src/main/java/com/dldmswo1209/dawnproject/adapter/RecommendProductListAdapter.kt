@@ -6,22 +6,25 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.dldmswo1209.dawnproject.dataClass.ProductItem
-import com.dldmswo1209.dawnproject.databinding.RecommendItemBinding
+import com.dldmswo1209.dawnproject.databinding.RecommendProductItemBinding
 
-class RecommendListAdapter: ListAdapter<ProductItem, RecommendListAdapter.ViewHolder>(diffUtil) {
-    inner class ViewHolder(private val binding: RecommendItemBinding) : RecyclerView.ViewHolder(binding.root){
+class RecommendProductListAdapter: ListAdapter<ProductItem, RecommendProductListAdapter.ViewHolder>(diffUtil) {
+    inner class ViewHolder(private val binding: RecommendProductItemBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(productItem: ProductItem){
-            binding.imageView.setImageResource(productItem.image)
-            binding.brandTextView.text = productItem.brand
+            binding.itemImageView.setImageResource(productItem.image)
             binding.detailTextView.text = productItem.detail
             binding.saleTextView.text = productItem.sale
             binding.priceTextView.text = productItem.price
             binding.likeButton.isChecked = productItem.like
+            binding.likeButton.setOnClickListener {
+                currentList[adapterPosition].like = !currentList[adapterPosition].like
+                notifyDataSetChanged()
+            }
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder{
-        return ViewHolder(RecommendItemBinding.inflate(LayoutInflater.from(parent.context),parent, false))
+        return ViewHolder(RecommendProductItemBinding.inflate(LayoutInflater.from(parent.context),parent, false))
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
