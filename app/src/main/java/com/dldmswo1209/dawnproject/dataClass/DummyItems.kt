@@ -42,6 +42,12 @@ val bannerImages = mutableListOf(
     R.drawable.test_ad2,
     R.drawable.test_ad3
 )
+val bannerImages2 = mutableListOf(
+    BannerItem(R.drawable.test_ad1),
+    BannerItem(R.drawable.test_ad2),
+    BannerItem(R.drawable.test_ad3)
+
+)
 
 val saleItems1 = mutableListOf(
     ProductItem(R.drawable.test_image,"아디다스","자체제작 / 크롭 후드 트레이닝","23%","76,500","상의",false),
