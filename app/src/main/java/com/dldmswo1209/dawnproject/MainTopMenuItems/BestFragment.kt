@@ -6,8 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.dldmswo1209.dawnproject.MainActivity
 import com.dldmswo1209.dawnproject.R
+import com.dldmswo1209.dawnproject.adapter.BestProductListAdapter
+import com.dldmswo1209.dawnproject.dataClass.productRankList
 import com.dldmswo1209.dawnproject.databinding.FragmentBestBinding
 import com.dldmswo1209.dawnproject.options.AgeOptionFragment
 import com.dldmswo1209.dawnproject.options.BrandShopOptionFragment
@@ -23,6 +27,14 @@ class BestFragment : Fragment(R.layout.fragment_best) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentBestBinding.bind(view)
+
+        val bestProductListAdapter = BestProductListAdapter()
+        bestProductListAdapter.submitList(productRankList)
+        val gridLayoutManager = GridLayoutManager(context, 2, LinearLayoutManager.VERTICAL, false)
+        binding.bestRecyclerView.apply {
+            adapter = bestProductListAdapter
+            layoutManager = gridLayoutManager
+        }
 
         binding.optionAge.setOnClickListener{
             val ageOptionFragment = AgeOptionFragment {

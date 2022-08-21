@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainTopMenuItems.TodaySaleFragment"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginEnd="7dp">
+            <FrameLayout
+                android:id="@+id/item1ImageFrameLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/item1ImageView"
+                    android:layout_width="170dp"
+                    android:layout_height="180dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/test_image" />
+
+                <CheckBox
+                    android:id="@+id/item1Like"
+                    android:layout_width="25dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/selector_like"
+                    android:button="@null"
+                    android:layout_gravity="bottom|end"
+                    android:layout_margin="8dp"/>
+            </FrameLayout>
+            <TextView
+                android:id="@+id/item1BrandTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="아디다스"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:id="@+id/item1DetailTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="자체제작 / 크롭 후드 트레이닝"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:maxEms="10"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/item1SaleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23%"/>
+                <TextView
+                    android:id="@+id/item1PriceTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:text="76,500"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <FrameLayout
+                android:id="@+id/item2ImageFrameLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/item2ImageView"
+                    android:layout_width="170dp"
+                    android:layout_height="180dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/test_image2" />
+
+                <CheckBox
+                    android:id="@+id/item2Like"
+                    android:layout_width="25dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/selector_like"
+                    android:button="@null"
+                    android:layout_gravity="bottom|end"
+                    android:layout_margin="8dp"/>
+            </FrameLayout>
+            <TextView
+                android:id="@+id/item2BrandTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="아디다스"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:id="@+id/item2DetailTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="자체제작 / 크롭 후드 트레이닝"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:maxEms="10"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/item2SaleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23%"/>
+                <TextView
+                    android:id="@+id/item2PriceTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:text="76,500"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="7dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginEnd="7dp">
+            <FrameLayout
+                android:id="@+id/item3ImageFrameLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/item3ImageView"
+                    android:layout_width="170dp"
+                    android:layout_height="180dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/test_image" />
+
+                <CheckBox
+                    android:id="@+id/item3Like"
+                    android:layout_width="25dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/selector_like"
+                    android:button="@null"
+                    android:layout_gravity="bottom|end"
+                    android:layout_margin="8dp"/>
+            </FrameLayout>
+            <TextView
+                android:id="@+id/item3BrandTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="아디다스"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:id="@+id/item3DetailTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="자체제작 / 크롭 후드 트레이닝"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:maxEms="10"/>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/item3SaleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23%"/>
+                <TextView
+                    android:id="@+id/item3PriceTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:text="76,500"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <FrameLayout
+                android:id="@+id/item4ImageFrameLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/item4ImageView"
+                    android:layout_width="170dp"
+                    android:layout_height="180dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/test_image" />
+
+                <CheckBox
+                    android:id="@+id/item4Like"
+                    android:layout_width="25dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/selector_like"
+                    android:button="@null"
+                    android:layout_gravity="bottom|end"
+                    android:layout_margin="8dp"/>
+            </FrameLayout>
+            <TextView
+                android:id="@+id/item4BrandTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="아디다스"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:id="@+id/item4DetailTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="자체제작 / 크롭 후드 트레이닝"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:maxEms="10"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/item4SaleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="23%"/>
+                <TextView
+                    android:id="@+id/item4PriceTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:text="76,500"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

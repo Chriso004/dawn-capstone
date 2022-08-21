@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp">
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="130dp"
+            android:layout_height="240dp"
+            android:src="@drawable/brand_test_image1"/>
+        <CheckBox
+            android:id="@+id/thumbButton"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/selector_thumb"
+            android:button="@null"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="10dp"/>
+    </FrameLayout>
+    
+    <TextView
+        android:id="@+id/brandTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="드로우핏"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_marginTop="1dp"/>
+    <TextView
+        android:id="@+id/tagTextView"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:text="#캠퍼스룩 #캐주얼 #여행룩 #데이트룩 #일상룩"
+        android:textSize="10sp"
+        android:textColor="#000000"
+        android:layout_marginTop="2dp"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

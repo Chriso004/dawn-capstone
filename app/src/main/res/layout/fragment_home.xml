@@ -31,7 +31,9 @@
                 app:layout_constraintTop_toBottomOf="@id/mainAdImageViewPager"
                 android:layout_marginStart="14dp"
                 android:layout_marginEnd="14dp"
-                android:layout_marginTop="35dp"/>
+                android:layout_marginTop="35dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
             <View
                 android:id="@+id/line"
                 android:layout_width="0dp"
@@ -84,10 +86,10 @@
 
 
             </androidx.appcompat.widget.LinearLayoutCompat>
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/todaySaleRecyclerView"
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/todaySaleViewPager"
                 android:layout_width="0dp"
-                android:layout_height="492dp"
+                android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/todaySaleTitle"
@@ -107,7 +109,7 @@
                 android:gravity="center"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/todaySaleRecyclerView"
+                app:layout_constraintTop_toBottomOf="@id/todaySaleViewPager"
                 android:layout_marginTop="28dp"/>
 
             <TextView
@@ -149,13 +151,15 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/brandCodyRankRecyclerView"
                 android:layout_width="0dp"
-                android:layout_height="292dp"
+                android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/brandCodyRankTitle"
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="14dp"
-                android:layout_marginEnd="14dp"/>
+                android:layout_marginEnd="14dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
             <TextView
                 android:id="@+id/brandProductRankTitle"
@@ -173,13 +177,13 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/brandProductRankRecyclerView"
                 android:layout_width="0dp"
-                android:layout_height="366dp"
+                android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/brandProductRankTitle"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="14dp"
-                android:layout_marginEnd="14dp"/>
+                android:layout_marginEnd="14dp" />
 
             <TextView
                 android:id="@+id/brandProductRankLookDetailButton"
@@ -235,13 +239,15 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/shopCodyRankRecyclerView"
                 android:layout_width="0dp"
-                android:layout_height="292dp"
+                android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/shopCodyRankTitle"
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="14dp"
-                android:layout_marginEnd="14dp"/>
+                android:layout_marginEnd="14dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
             <TextView
                 android:id="@+id/shopProductRankTitle"
@@ -259,7 +265,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/shopProductRankRecyclerView"
                 android:layout_width="0dp"
-                android:layout_height="366dp"
+                android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/shopProductRankTitle"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -299,7 +305,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recommendProductForYouRecyclerView"
                 android:layout_width="0dp"
-                android:layout_height="492dp"
+                android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/recommendProductForYouTitle"

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp">
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/itemImageView"
+                android:layout_width="110dp"
+                android:layout_height="120dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/test_image" />
+
+            <CheckBox
+                android:id="@+id/likeButton"
+                android:layout_width="16dp"
+                android:layout_height="14dp"
+                android:background="@drawable/selector_like"
+                android:button="@null"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="8dp"/>
+        </FrameLayout>
+        <TextView
+            android:id="@+id/brandTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아디다스"
+            android:layout_marginTop="5dp" />
+
+        <TextView
+            android:id="@+id/detailTextView"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:text="자체제작 / 크롭 후드 트레이닝"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:maxEms="10"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/saleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="23%"/>
+            <TextView
+                android:id="@+id/priceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:text="76,500"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>
