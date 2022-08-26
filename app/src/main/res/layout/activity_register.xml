@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.RegisterActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/registerTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="회원가입"
+                android:textSize="18sp"
+                android:textColor="@color/titleColor_black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="62dp"/>
+            <TextView
+                android:id="@+id/emailTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이메일"
+                android:textSize="14sp"
+                android:textColor="@color/titleColor_black"
+                app:layout_constraintTop_toBottomOf="@id/registerTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="26dp"
+                android:layout_marginStart="28dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:textSize="14sp"
+                android:textColor="#FF0000"
+                app:layout_constraintStart_toEndOf="@id/emailTitle"
+                app:layout_constraintTop_toTopOf="@id/emailTitle"
+                android:layout_marginStart="2dp"/>
+
+            <EditText
+                android:id="@+id/emailEditTextView"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:background="@drawable/rectangle_line_d3d3d3"
+                app:layout_constraintTop_toBottomOf="@id/emailTitle"
+                app:layout_constraintStart_toStartOf="@id/emailTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="28dp"
+                android:layout_marginTop="10dp"
+                android:hint="dawn@email.com"
+                android:textSize="12sp"
+                android:textColorHint="#A0A0A0"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"/>
+
+            <TextView
+                android:id="@+id/passwordTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="비밀번호"
+                android:textSize="14sp"
+                android:textColor="@color/titleColor_black"
+                app:layout_constraintTop_toBottomOf="@id/emailEditTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="11dp"
+                android:layout_marginStart="28dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:textSize="14sp"
+                android:textColor="#FF0000"
+                app:layout_constraintStart_toEndOf="@id/passwordTitle"
+                app:layout_constraintTop_toTopOf="@id/passwordTitle"
+                android:layout_marginStart="2dp"/>
+
+            <EditText
+                android:id="@+id/passwordEditTextView"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:background="@drawable/rectangle_line_d3d3d3"
+                app:layout_constraintTop_toBottomOf="@id/passwordTitle"
+                app:layout_constraintStart_toStartOf="@id/passwordTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="28dp"
+                android:layout_marginTop="10dp"
+                android:hint="숫자, 영문, 특수문자 조합 최소 8자 이상"
+                android:textSize="12sp"
+                android:textColorHint="#A0A0A0"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"/>
+            <EditText
+                android:id="@+id/passwordConfirmEditTextView"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:background="@drawable/rectangle_line_d3d3d3"
+                app:layout_constraintTop_toBottomOf="@id/passwordEditTextView"
+                app:layout_constraintStart_toStartOf="@id/passwordEditTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="28dp"
+                android:layout_marginTop="7dp"
+                android:hint="비밀번호 재입력"
+                android:textSize="12sp"
+                android:textColorHint="#A0A0A0"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"/>
+            <TextView
+                android:id="@+id/isRightPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="비밀번호가 일치합니다."
+                android:textSize="10sp"
+                android:textColor="#33BFBE"
+                app:layout_constraintTop_toBottomOf="@id/passwordConfirmEditTextView"
+                app:layout_constraintStart_toStartOf="@id/passwordConfirmEditTextView"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/nickNameTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이메일"
+                android:textSize="14sp"
+                android:textColor="@color/titleColor_black"
+                app:layout_constraintTop_toBottomOf="@id/isRightPassword"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="26dp"
+                android:layout_marginStart="28dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:textSize="14sp"
+                android:textColor="#FF0000"
+                app:layout_constraintStart_toEndOf="@id/nickNameTitle"
+                app:layout_constraintTop_toTopOf="@id/nickNameTitle"
+                android:layout_marginStart="2dp"/>
+
+            <EditText
+                android:id="@+id/nickNameEditTextView"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:background="@drawable/rectangle_line_d3d3d3"
+                app:layout_constraintTop_toBottomOf="@id/nickNameTitle"
+                app:layout_constraintStart_toStartOf="@id/nickNameTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="28dp"
+                android:layout_marginTop="10dp"
+                android:hint="닉네임 입력 (2~15자 이내)"
+                android:textSize="12sp"
+                android:textColorHint="#A0A0A0"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"/>
+
+            <TextView
+                android:id="@+id/recommenderIdTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="추천인 아이디"
+                android:textSize="14sp"
+                android:textColor="@color/titleColor_black"
+                app:layout_constraintTop_toBottomOf="@id/nickNameEditTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="26dp"
+                android:layout_marginStart="28dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:textSize="14sp"
+                android:textColor="#FF0000"
+                app:layout_constraintStart_toEndOf="@id/recommenderIdTitle"
+                app:layout_constraintTop_toTopOf="@id/recommenderIdTitle"
+                android:layout_marginStart="2dp"/>
+
+            <EditText
+                android:id="@+id/recommenderIdEditTextView"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:background="@drawable/rectangle_line_d3d3d3"
+                app:layout_constraintTop_toBottomOf="@id/recommenderIdTitle"
+                app:layout_constraintStart_toStartOf="@id/recommenderIdTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="28dp"
+                android:layout_marginTop="10dp"
+                android:textSize="12sp"
+                android:textColorHint="#A0A0A0"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/tosLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/recommenderIdEditTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="29dp"
+                android:layout_marginEnd="29dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/rectangle_line_d3d3d3"
+                android:paddingBottom="21dp">
+
+                <RadioButton
+                    android:id="@+id/allAgreeButton"
+                    android:layout_width="28dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/allAgreeTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="약관 전체 동의하기"
+                    android:textColor="#808080"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/allAgreeButton"
+                    app:layout_constraintTop_toTopOf="@id/allAgreeButton"
+                    app:layout_constraintBottom_toBottomOf="@id/allAgreeButton"
+                    android:layout_marginStart="3dp"/>
+                <View
+                    android:id="@+id/lineView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/allAgreeTextView"
+                    android:layout_marginTop="11dp"
+                    android:background="#D3D3D3"/>
+
+                <RadioGroup
+                    android:id="@+id/tosRadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginTop="18dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lineView">
+
+                    <RadioButton
+                        android:id="@+id/radio1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="[필수] 만 14세 이상입니다."
+                        android:textSize="11sp"
+                        android:textColor="#808080"/>
+                    <RadioButton
+                        android:id="@+id/radio2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="[필수] 서비스 이용약관에 동의"
+                        android:textSize="11sp"
+                        android:textColor="#808080"/>
+                    <RadioButton
+                        android:id="@+id/radio3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="[필수] 개인정보 수집 이용약관에 동의"
+                        android:textSize="11sp"
+                        android:textColor="#808080"/>
+                    <RadioButton
+                        android:id="@+id/radio4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text="[선택] 마케팅 활용 및 광고성 정보 수신 동의"
+                        android:textSize="11sp"
+                        android:textColor="#808080"/>
+
+                </RadioGroup>
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@id/tosRadioGroup"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="21dp"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/lookTos1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="보기"
+                        android:textSize="9sp"
+                        android:textColor="#606060"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="16dp"/>
+                    <TextView
+                        android:id="@+id/lookTos2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="보기"
+                        android:textSize="9sp"
+                        android:textColor="#606060"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="16dp"/>
+                    <TextView
+                        android:id="@+id/lookTos3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="보기"
+                        android:textSize="9sp"
+                        android:textStyle="bold"
+                        android:textColor="#606060"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/identifyButton"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:background="@drawable/rectangle_dawn_color"
+                android:text="본인인증하러 가기"
+                app:layout_constraintStart_toStartOf="@id/tosLayout"
+                app:layout_constraintEnd_toEndOf="@id/tosLayout"
+                app:layout_constraintTop_toBottomOf="@id/tosLayout"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_marginTop="30dp"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/identifyButton"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

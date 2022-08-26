@@ -61,6 +61,24 @@ val saleItems2 = mutableListOf(
     ProductItem(R.drawable.test_image,"테스트3","린넨 미니멀 베이지 셔츠","47%","69,900","상의",false),
     ProductItem(R.drawable.test_image2,"테스트4","자체제작 / 그레이 페미닌 퓨어...","","47,000","상의",false)
 )
+val saleItems3 = mutableListOf(
+    ProductItem(R.drawable.test_image,"테스트입니다.","자체제작 / 크롭 후드 트레이닝","23%","76,500","상의",false),
+    ProductItem(R.drawable.test_image2,"테스트2","테스트 상세설명 입니다","40%","32,900","상의",false),
+    ProductItem(R.drawable.test_image,"테스트3","린넨 미니멀 베이지 셔츠","47%","69,900","상의",false),
+    ProductItem(R.drawable.test_image2,"테스트4","자체제작 / 그레이 페미닌 퓨어...","","47,000","상의",false)
+)
+val saleItems4 = mutableListOf(
+    ProductItem(R.drawable.test_image,"테스트입니다.","자체제작 / 크롭 후드 트레이닝","23%","76,500","상의",false),
+    ProductItem(R.drawable.test_image2,"테스트2","테스트 상세설명 입니다","40%","32,900","상의",false),
+    ProductItem(R.drawable.test_image,"테스트3","린넨 미니멀 베이지 셔츠","47%","69,900","상의",false),
+    ProductItem(R.drawable.test_image2,"테스트4","자체제작 / 그레이 페미닌 퓨어...","","47,000","상의",false)
+)
+val saleItems5 = mutableListOf(
+    ProductItem(R.drawable.test_image,"테스트입니다.","자체제작 / 크롭 후드 트레이닝","23%","76,500","상의",false),
+    ProductItem(R.drawable.test_image2,"테스트2","테스트 상세설명 입니다","40%","32,900","상의",false),
+    ProductItem(R.drawable.test_image,"테스트3","린넨 미니멀 베이지 셔츠","47%","69,900","상의",false),
+    ProductItem(R.drawable.test_image2,"테스트4","자체제작 / 그레이 페미닌 퓨어...","","47,000","상의",false)
+)
 val brandList = mutableListOf(
     CategoryItem(R.drawable.brand_test_image,"칼하트"),
     CategoryItem(R.drawable.brand_test_image, "디스커버리"),

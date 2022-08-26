@@ -3,4 +3,5 @@
     <dimen name="bottomNavigationView" tools:override="true">0dp</dimen>
     <dimen name="pageMargin">100dp</dimen>
     <dimen name="pageWidth">300dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>

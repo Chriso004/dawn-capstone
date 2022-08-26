@@ -64,25 +64,39 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginEnd="20dp">
 
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/chevron_left"
+                    android:layout_gravity="center"/>
+
                 <TextView
                     android:id="@+id/currentPage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1"
+                    android:textSize="13sp"
                     android:textColor="@color/titleColor_black"
                     android:layout_marginEnd="2dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/titleColor_black"
-                    android:text="/"/>
+                    android:text="/"
+                    android:textSize="13sp"/>
                 <TextView
                     android:id="@+id/totalPage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/titleColor_black"
                     android:text="5"
+                    android:textSize="13sp"
                     android:layout_marginStart="2dp"/>
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/chevron_right"
+                    android:layout_gravity="center"/>
 
 
             </androidx.appcompat.widget.LinearLayoutCompat>
@@ -93,24 +107,44 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/todaySaleTitle"
-                android:layout_marginTop="9dp"
-                android:layout_marginStart="14dp"
-                android:layout_marginEnd="14dp"/>
+                android:layout_marginTop="9dp"/>
 
-            <TextView
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/todaySaleLookDetailButton"
                 android:layout_width="124dp"
                 android:layout_height="37dp"
-                android:background="@drawable/rectangle_white"
-                android:text="특가 더보기"
-                android:textColor="@color/titleColor_black"
-                android:textStyle="bold"
-                android:textSize="13sp"
-                android:gravity="center"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/todaySaleViewPager"
-                android:layout_marginTop="28dp"/>
+                android:layout_marginTop="28dp"
+                android:background="@drawable/rectangle_white"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="특가"
+                    android:textColor="@color/titleColor_black"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:gravity="center" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 더보기"
+                    android:textColor="@color/titleColor_black"
+                    android:textSize="13sp"
+                    android:gravity="center" />
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/right_arrow_bold"
+                    android:layout_marginStart="3dp"/>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
 
             <TextView
                 android:id="@+id/brandTitle"
@@ -136,17 +170,28 @@
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="14dp"/>
 
-            <TextView
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/brandCodyRankLookDetailButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="더보기"
-                android:textSize="12sp"
-                android:textColor="@color/titleColor_black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/brandCodyRankTitle"
                 app:layout_constraintBottom_toBottomOf="@id/brandCodyRankTitle"
-                android:layout_marginEnd="15dp"/>
+                android:layout_marginEnd="15dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="더보기"
+                    android:textSize="12sp"
+                    android:textColor="@color/titleColor_black" />
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/chevron_right"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/brandCodyRankRecyclerView"
@@ -183,22 +228,42 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="14dp"
-                android:layout_marginEnd="14dp" />
+                android:layout_marginEnd="6dp" />
 
-            <TextView
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/brandProductRankLookDetailButton"
                 android:layout_width="124dp"
                 android:layout_height="37dp"
-                android:background="@drawable/rectangle_white"
-                android:text="랭킹 더보기"
-                android:textColor="@color/titleColor_black"
-                android:textStyle="bold"
-                android:textSize="13sp"
-                android:gravity="center"
                 app:layout_constraintTop_toBottomOf="@id/brandProductRankRecyclerView"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="20dp"/>
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rectangle_white"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="랭킹"
+                    android:textColor="@color/titleColor_black"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:gravity="center" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 더보기"
+                    android:textColor="@color/titleColor_black"
+                    android:textSize="13sp"
+                    android:gravity="center" />
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/right_arrow_bold"
+                    android:layout_marginStart="3dp"/>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
             <TextView
                 android:id="@+id/shopTitle"
@@ -224,17 +289,27 @@
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginStart="14dp"/>
 
-            <TextView
+
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/shopCodyRankLookDetailButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="더보기"
-                android:textSize="12sp"
-                android:textColor="@color/titleColor_black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/shopCodyRankTitle"
                 app:layout_constraintBottom_toBottomOf="@id/shopCodyRankTitle"
-                android:layout_marginEnd="15dp"/>
+                android:layout_marginEnd="15dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="더보기"
+                    android:textSize="12sp"
+                    android:textColor="@color/titleColor_black" />
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/chevron_right"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/shopCodyRankRecyclerView"
@@ -271,22 +346,43 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="10dp"
                 android:layout_marginStart="14dp"
-                android:layout_marginEnd="14dp"/>
+                android:layout_marginEnd="6dp"/>
 
-            <TextView
+            <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/shopProductRankLookDetailButton"
                 android:layout_width="124dp"
                 android:layout_height="37dp"
-                android:background="@drawable/rectangle_white"
-                android:text="랭킹 더보기"
-                android:textColor="@color/titleColor_black"
-                android:textStyle="bold"
-                android:textSize="13sp"
-                android:gravity="center"
                 app:layout_constraintTop_toBottomOf="@id/shopProductRankRecyclerView"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="20dp"/>
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rectangle_white"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="랭킹"
+                    android:textColor="@color/titleColor_black"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:gravity="center" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 더보기"
+                    android:textColor="@color/titleColor_black"
+                    android:textSize="13sp"
+                    android:gravity="center" />
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/right_arrow_bold"
+                    android:layout_marginStart="3dp"/>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
 
 
             <TextView
@@ -311,7 +407,8 @@
                 app:layout_constraintTop_toBottomOf="@id/recommendProductForYouTitle"
                 android:layout_marginTop="9dp"
                 android:layout_marginStart="14dp"
-                android:layout_marginEnd="14dp"/>
+                android:layout_marginEnd="7dp"
+                android:foregroundGravity="center"/>
             
             <FrameLayout
                 android:layout_width="0dp"
@@ -412,7 +509,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="DAWN"
+                        android:text="D a w n"
                         android:textColor="#707070"
                         android:textSize="30sp"
                         android:textStyle="bold"

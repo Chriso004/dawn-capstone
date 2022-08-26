@@ -23,4 +23,13 @@
     <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
         <item name="android:background">@drawable/option_background</item>
     </style>
+
+    <style name="Theme.DawnProject.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.DawnProject.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.DawnProject.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
