@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.LoginActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="로그인"
+        android:textSize="18sp"
+        android:textColor="@color/titleColor_black"
+        android:textStyle="bold"
+        android:layout_marginTop="115dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <EditText
+        android:id="@+id/emailEditTextView"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/rectangle_line_d3d3d3"
+        android:layout_marginEnd="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="35dp"
+        android:hint="아이디 입력"
+        android:textSize="14sp"
+        android:textColorHint="#A0A0A0"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"/>
+    <EditText
+        android:id="@+id/passwordEditTextView"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/rectangle_line_d3d3d3"
+        android:layout_marginEnd="28dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="7dp"
+        android:hint="비밀번호 입력"
+        android:textSize="14sp"
+        android:textColorHint="#A0A0A0"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"/>
+
+    <TextView
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/rectangle_dawn_color"
+        android:text="로그인"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="27dp"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:id="@+id/findIdButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아이디 찾기"
+            android:textSize="11sp"
+            android:textColor="@color/titleColor_black"
+            android:layout_marginEnd="15dp"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="15dp"
+            android:background="#D7D7D7"
+            android:layout_marginEnd="15dp"/>
+
+        <TextView
+            android:id="@+id/findPwButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="비밀번호 찾기"
+            android:textSize="11sp"
+            android:textColor="@color/titleColor_black"
+            android:layout_marginEnd="15dp"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="15dp"
+            android:background="#D7D7D7"
+            android:layout_marginEnd="15dp"/>
+
+        <TextView
+            android:id="@+id/registerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="회원가입"
+            android:textSize="11sp"
+            android:textColor="@color/titleColor_black" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="75dp">
+        <View
+            android:layout_width="85dp"
+            android:layout_height="1dp"
+            android:background="#A0A0A0"
+            android:layout_marginEnd="15dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SNS 계정으로 로그인하기"
+            android:layout_marginEnd="15dp"/>
+        <View
+            android:layout_width="85dp"
+            android:layout_height="1dp"
+            android:background="#A0A0A0"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center">
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/loginWithKaKao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/kakao"
+            android:layout_marginEnd="20dp"/>
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/loginWithNaver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/naver"
+            android:layout_marginEnd="20dp"/>
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/loginWithFacebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/facebook"
+            android:layout_marginEnd="20dp"/>
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/loginWithGoogle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/google"
+            android:layout_marginEnd="20dp"/>
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/loginWithApple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/apple"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

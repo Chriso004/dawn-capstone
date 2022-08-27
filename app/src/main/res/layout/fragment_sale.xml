@@ -67,12 +67,555 @@
                         app:layout_constraintTop_toBottomOf="@id/todaySaleTitle"
                         app:layout_constraintBottom_toBottomOf="parent"
                         android:layout_marginTop="10dp"
-                        android:layout_marginBottom="8dp" />
+                        android:layout_marginBottom="8dp"
+                        app:bvp_indicator_visibility="gone" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="브랜드 기획전"
+                android:textSize="16sp"
+                android:textColor="@color/titleColor_black"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"/>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp">
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:id="@+id/brandImageView1"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/brand_test_image"
+                    android:layout_marginEnd="5dp"/>
+                <TextView
+                    android:id="@+id/brandTitleTextView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="뉴발란스"
+                    android:textColor="#505050"
+                    android:textSize="12sp"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/brandSaleImageView1"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="9dp"
+                android:src="@drawable/test_ad3"
+                android:scaleType="fitXY"/>
+            <TextView
+                android:id="@+id/brandSaleDetailTextView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="22 F/W 1차 신상품 : 한정 발매 및 15% 쿠폰 할인"
+                android:textColor="@color/titleColor_black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="15dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/brandSaleRecyclerView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="10dp"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="10dp">
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:id="@+id/brandImageView2"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/brand_test_image"
+                    android:layout_marginEnd="5dp"/>
+                <TextView
+                    android:id="@+id/brandTitleTextView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="아디다스"
+                    android:textColor="#505050"
+                    android:textSize="12sp"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/brandSaleImageView2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="9dp"
+                android:src="@drawable/test_ad2"
+                android:scaleType="fitXY"/>
+            <TextView
+                android:id="@+id/brandSaleDetailTextView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="22 S/S 파이널 시즌오프 : 최대 62% 할인 + 추가 10% 쿠폰"
+                android:textColor="@color/titleColor_black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="15dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/brandSaleRecyclerView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="10dp"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="10dp">
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:id="@+id/brandImageView3"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/brand_test_image"
+                    android:layout_marginEnd="5dp"/>
+                <TextView
+                    android:id="@+id/brandTitleTextView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="나이키"
+                    android:textColor="#505050"
+                    android:textSize="12sp"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/brandSaleImageView3"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="9dp"
+                android:src="@drawable/test_ad1"
+                android:scaleType="fitXY"/>
+            <TextView
+                android:id="@+id/brandSaleDetailTextView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="22 F/W 1차 신상품 : 한정 발매 및 15% 쿠폰 할인"
+                android:textColor="@color/titleColor_black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="15dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/brandSaleRecyclerView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="10dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/brandSaleMoreButton"
+                android:layout_width="180dp"
+                android:layout_height="37dp"
+                android:background="@drawable/rectangle_white"
+                android:text="브랜드 기획전 더보기 >"
+                android:textSize="13sp"
+                android:textColor="@color/titleColor_black"
+                android:textStyle="bold"
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="쇼핑몰 기획전"
+                android:textSize="16sp"
+                android:textColor="@color/titleColor_black"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"/>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="10dp">
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:id="@+id/shopImageView1"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/brand_test_image"
+                    android:layout_marginEnd="5dp"/>
+                <TextView
+                    android:id="@+id/shopTitleTextView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="올멋"
+                    android:textColor="#505050"
+                    android:textSize="12sp"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/shopSaleImageView1"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="9dp"
+                android:src="@drawable/test_ad3"
+                android:scaleType="fitXY"/>
+            <TextView
+                android:id="@+id/shopSaleDetailTextView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="기본 티셔츠 최대 45% 할인 특가전"
+                android:textColor="@color/titleColor_black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="15dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/shopSaleRecyclerView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="10dp"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="10dp">
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:id="@+id/shopImageView2"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/brand_test_image"
+                    android:layout_marginEnd="5dp"/>
+                <TextView
+                    android:id="@+id/shopTitleTextView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="코코"
+                    android:textColor="#505050"
+                    android:textSize="12sp"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/shopSaleImageView2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="9dp"
+                android:src="@drawable/test_ad2"
+                android:scaleType="fitXY"/>
+            <TextView
+                android:id="@+id/shopSaleDetailTextView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="라스트 썸머 특가전"
+                android:textColor="@color/titleColor_black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="15dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/shopSaleRecyclerView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="10dp"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="10dp">
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:id="@+id/shopImageView3"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/brand_test_image"
+                    android:layout_marginEnd="5dp"/>
+                <TextView
+                    android:id="@+id/shopTitleTextView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="라스트 썸머 특가전"
+                    android:textColor="#505050"
+                    android:textSize="12sp"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/shopSaleImageView3"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="9dp"
+                android:src="@drawable/test_ad1"
+                android:scaleType="fitXY"/>
+            <TextView
+                android:id="@+id/shopSaleDetailTextView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="신상 투피스 특가할인전"
+                android:textColor="@color/titleColor_black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginStart="15dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/shopSaleRecyclerView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="10dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/shopSaleMoreButton"
+                android:layout_width="180dp"
+                android:layout_height="37dp"
+                android:background="@drawable/rectangle_white"
+                android:text="쇼핑몰 기획전 더보기 >"
+                android:textSize="13sp"
+                android:textColor="@color/titleColor_black"
+                android:textStyle="bold"
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center_horizontal"/>
+            
+            <com.zhpan.bannerview.BannerViewPager
+                android:id="@+id/secondSaleBannerViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="50dp"
+                app:bvp_indicator_gravity="end"
+                app:bvp_indicator_checked_color="@color/dawnColor"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="15dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="더 많은"
+                    android:textColor="#505050"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="세일 상품"
+                    android:textSize="18sp"
+                    android:textColor="@color/dawnColor"
+                    android:textStyle="bold"
+                    android:layout_marginStart="3dp"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/bestCategoryTabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabMode="scrollable"
+                app:tabTextColor="#A0A0A0"
+                app:tabIndicatorColor="@null"
+                app:tabSelectedTextColor="@color/black"
+                app:tabRippleColor="@null"
+                android:layout_marginTop="10dp">
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="전체"/>
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="상의"/>
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="아우터"/>
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="원피스"/>
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="바지"/>
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="스커트"/>
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="신발"/>
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="가방"/>
+            </com.google.android.material.tabs.TabLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/moreRecommendRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="335dp"
+                android:layout_marginTop="35dp"
+                android:background="#E6E6E6">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="21dp">
+                        <TextView
+                            android:layout_width="136dp"
+                            android:layout_height="20dp"
+                            android:background="@drawable/rectangle_line"
+                            android:text="1:1 문의하기"
+                            android:textSize="12sp"
+                            android:textColor="#707070"
+                            android:gravity="center"
+                            android:layout_marginEnd="15dp"/>
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="20dp"
+                            android:text="전화하기(010-9208-5638)"
+                            android:textSize="12sp"
+                            android:textColor="#707070"
+                            android:gravity="center"
+                            android:background="@drawable/rectangle_line" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="18dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="10sp"
+                            android:textColor="#707070"
+                            android:gravity="center"
+                            android:text="회사소개"
+                            android:layout_marginEnd="80dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="공지사항"
+                            android:textSize="10sp"
+                            android:textColor="#707070"
+                            android:gravity="center"
+                            android:layout_marginEnd="80dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="입점문의"
+                            android:textSize="10sp"
+                            android:textColor="#707070"
+                            android:gravity="center"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="10sp"
+                            android:textColor="#707070"
+                            android:gravity="center"
+                            android:text="이용약관"
+                            android:layout_marginEnd="55dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="개인정보처리방침"
+                            android:textSize="10sp"
+                            android:textColor="#707070"
+                            android:gravity="center"
+                            android:layout_marginEnd="42dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="사업자정보확인"
+                            android:textSize="10sp"
+                            android:textColor="#707070"
+                            android:gravity="center"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DAWN"
+                        android:textColor="#707070"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="대표 : 이윤석  |  사업자 등록번호 : 123-45-67890\n주소 : 한림대학교 캠퍼스라이프센터 1층, 6호\n고객센터 : 1588-0000 (근무시간 : 00:00~23:59, 점심시간 : 12:00~14:00,  토/일/공휴일 휴무)\n제휴/광고문의 : dawn@naver.com\n통신판매업신고번호 : 2022-경기하남-1234\n\nDawn에서 판매되는 모든 브랜드 제품은 정식제조, 정식수입원을 통해 유통되는  100% 정품입니다.\n\n또한 Dawn에서 판매되는 상품 중에는 개별 입점 판매자(셀러스)의 상품이 포함되어 있습니다.\n해당 상품에 대해 Dawn은 통신판매중개자의 지위에 있고 통신판매의 당사자가 아닙니다.\n해당 상품의 거래 전반에 관한 의무와 책임은 각 입점 판매자에게 있습니다."
+                        android:textSize="8sp"
+                        android:textColor="#505050"
+                        android:gravity="center"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"/>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_facebook"
+                            android:layout_marginEnd="30dp"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_instagram"
+                            android:layout_marginEnd="30dp"/>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/icon_youtube"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </FrameLayout>
+
+
+
+
+
         </androidx.appcompat.widget.LinearLayoutCompat>
+
+
         
     </ScrollView>
 

@@ -10,4 +10,5 @@
     <color name="background">#FFFFFF</color>
     <color name="dawnColor">#33BFBE</color>
     <color name="titleColor_black">#000000</color>
+    <color name="sale_text_color">#FF0000</color>
 </resources>

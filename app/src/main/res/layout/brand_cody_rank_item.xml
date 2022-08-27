@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:text="#캠퍼스룩 #캐주얼 #여행룩 #데이트룩 #일상룩"
         android:textSize="10sp"
-        android:textColor="#000000"
+        android:textColor="@color/titleColor_black"
         android:layout_marginTop="2dp"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/itemLayout"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginEnd="7dp"
         android:layout_marginBottom="7dp">
         <FrameLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="170dp"
+                android:layout_width="match_parent"
                 android:layout_height="180dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/test_image" />
@@ -35,6 +35,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="아디다스"
+            android:textSize="14sp"
+            android:textColor="@color/titleColor_black"
+            android:textStyle="bold"
             android:layout_marginTop="5dp" />
 
         <TextView
@@ -42,6 +45,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="자체제작 / 크롭 후드 트레이닝"
+            android:textSize="12sp"
+            android:textColor="@color/titleColor_black"
             android:maxLines="1"
             android:ellipsize="end"
             android:maxEms="10"/>
@@ -54,13 +59,17 @@
                 android:id="@+id/saleTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="23%"/>
+                android:text="23%"
+                android:textColor="@color/sale_text_color"
+                android:textSize="12sp"/>
             <TextView
                 android:id="@+id/priceTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="2dp"
-                android:text="76,500"/>
+                android:layout_marginStart="3dp"
+                android:text="76,500"
+                android:textSize="12sp"
+                android:textColor="@color/titleColor_black"/>
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.appcompat.widget.LinearLayoutCompat>
 
