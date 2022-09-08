@@ -10,13 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DawnProject">
         <activity
-            android:name=".LoginActivity"
+            android:name=".login.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".login.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterMainActivity"
+            android:name=".login.RegisterMainActivity"
             android:exported="false"
             android:label="@string/title_activity_register_main"
             android:theme="@style/Theme.DawnProject.NoActionBar" />
