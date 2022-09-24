@@ -48,7 +48,7 @@
             android:textColor="@color/titleColor_black"
             android:maxLines="1"
             android:ellipsize="end"
-            android:maxEms="10"/>
+            android:maxEms="8"/>
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="wrap_content"
@@ -62,6 +62,7 @@
                 android:text="23%"
                 android:textColor="#FF0000"
                 android:textSize="12sp"
+                android:textStyle="bold"
                 android:layout_marginEnd="1dp"/>
             <TextView
                 android:id="@+id/priceTextView"
@@ -70,6 +71,7 @@
                 android:layout_marginStart="2dp"
                 android:text="76,500"
                 android:textSize="12sp"
+                android:textStyle="bold"
                 android:textColor="@color/titleColor_black"/>
         </androidx.appcompat.widget.LinearLayoutCompat>
 

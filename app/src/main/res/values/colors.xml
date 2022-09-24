@@ -12,4 +12,5 @@
     <color name="titleColor_black">#000000</color>
     <color name="sale_text_color">#FF0000</color>
     <color name="text_color_gray">#6A6A6A</color>
+    <color name="red">#FF0000</color>
 </resources>

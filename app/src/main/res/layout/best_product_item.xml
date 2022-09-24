@@ -34,6 +34,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="아디다스"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/titleColor_black"
             android:maxLines="1"
             android:ellipsize="end"
             android:layout_marginTop="5dp" />
@@ -43,6 +46,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="자체제작 / 크롭 후드 트레이닝"
+            android:textSize="12sp"
+            android:textColor="@color/titleColor_black"
             android:maxLines="1"
             android:ellipsize="end"
             android:maxEms="10"/>
@@ -55,13 +60,18 @@
                 android:id="@+id/saleTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="23%"/>
+                android:text="23%"
+                android:textStyle="bold"
+                android:textColor="@color/red"/>
             <TextView
                 android:id="@+id/priceTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
-                android:text="76,500"/>
+                android:text="76,500"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="@color/titleColor_black" />
         </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.appcompat.widget.LinearLayoutCompat>

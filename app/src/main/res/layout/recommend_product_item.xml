@@ -33,6 +33,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="형광색 후드티"
+            android:textColor="@color/titleColor_black"
+            android:textSize="12sp"
             android:maxLines="1"
             android:ellipsize="end"
             android:layout_marginTop="5dp" />
@@ -47,13 +49,19 @@
                 android:id="@+id/saleTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="23%"/>
+                android:text="23%"
+                android:textColor="@color/red"
+                android:textSize="12sp"
+                android:textStyle="bold"/>
             <TextView
                 android:id="@+id/priceTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
-                android:text="76,500"/>
+                android:text="76,500"
+                android:textSize="12sp"
+                android:textColor="@color/titleColor_black"
+                android:textStyle="bold"/>
         </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.appcompat.widget.LinearLayoutCompat>

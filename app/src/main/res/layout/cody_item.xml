@@ -7,12 +7,12 @@
     <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginTop="30dp">
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="160dp"
-            android:layout_height="230dp"
+            android:layout_width="150dp"
+            android:layout_height="220dp"
             android:scaleType="fitXY"
             android:src="@drawable/brand_test_image1"/>
         <CheckBox
