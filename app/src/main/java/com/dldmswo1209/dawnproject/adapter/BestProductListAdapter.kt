@@ -2,13 +2,11 @@ package com.dldmswo1209.dawnproject.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.CompoundButton
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.dldmswo1209.dawnproject.dataClass.ProductItem
+import com.dldmswo1209.dawnproject.model.ProductItem
 import com.dldmswo1209.dawnproject.databinding.BestProductItemBinding
-import com.dldmswo1209.dawnproject.databinding.ProductRankItemBinding
 
 class BestProductListAdapter: ListAdapter<ProductItem, BestProductListAdapter.ViewHolder>(diffUtil) {
     inner class ViewHolder(private val binding: BestProductItemBinding) : RecyclerView.ViewHolder(binding.root){

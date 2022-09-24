@@ -1,4 +1,4 @@
-package com.dldmswo1209.dawnproject.topFragment
+package com.dldmswo1209.dawnproject.topMenuFragment
 
 import android.os.Bundle
 import android.view.View
@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import com.dldmswo1209.dawnproject.MainActivity
 import com.dldmswo1209.dawnproject.R
 import com.dldmswo1209.dawnproject.databinding.FragmentTopBarBinding
-import com.dldmswo1209.dawnproject.MainTopMenuItems.*
+import com.dldmswo1209.dawnproject.MainMenuFragment.*
 import com.google.android.material.tabs.TabLayout
 
 

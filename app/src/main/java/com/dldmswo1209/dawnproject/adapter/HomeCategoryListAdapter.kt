@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.dldmswo1209.dawnproject.dataClass.CategoryItem
+import com.dldmswo1209.dawnproject.model.CategoryItem
 import com.dldmswo1209.dawnproject.databinding.HomeCategoryItemBinding
 
 

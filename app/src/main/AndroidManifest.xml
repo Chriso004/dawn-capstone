@@ -10,6 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DawnProject">
         <activity
+            android:name=".AvatarActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.ar.core"
+            android:value="optional" />
+
+        <activity
             android:name=".login.LoginActivity"
             android:exported="false" />
         <activity

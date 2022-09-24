@@ -1,4 +1,4 @@
-package com.dldmswo1209.dawnproject.MainTopMenuItems
+package com.dldmswo1209.dawnproject.MainMenuFragment
 
 import android.os.Bundle
 import android.view.View
@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dldmswo1209.dawnproject.R
 import com.dldmswo1209.dawnproject.adapter.*
-import com.dldmswo1209.dawnproject.dataClass.*
+import com.dldmswo1209.dawnproject.model.*
 import com.dldmswo1209.dawnproject.databinding.FragmentSaleBinding
 import com.zhpan.bannerview.BannerViewPager
 import com.zhpan.bannerview.constants.PageStyle

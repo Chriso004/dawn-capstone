@@ -1,4 +1,4 @@
-package com.dldmswo1209.dawnproject.dataClass
+package com.dldmswo1209.dawnproject.model
 
 import com.dldmswo1209.dawnproject.R
 

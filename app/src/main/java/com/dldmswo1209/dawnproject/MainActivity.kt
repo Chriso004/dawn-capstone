@@ -1,17 +1,14 @@
 package com.dldmswo1209.dawnproject
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
-import androidx.viewpager2.adapter.FragmentStateAdapter
-import androidx.viewpager2.widget.ViewPager2
-import com.dldmswo1209.dawnproject.MainTopMenuItems.*
 import com.dldmswo1209.dawnproject.databinding.ActivityMainBinding
 import com.dldmswo1209.dawnproject.myPage.MyPageFragment
-import com.dldmswo1209.dawnproject.topFragment.LikeTopBarFragment
-import com.dldmswo1209.dawnproject.topFragment.MainTopBarFragment
-import com.dldmswo1209.dawnproject.topFragment.MyPageTopBarFragment
+import com.dldmswo1209.dawnproject.topMenuFragment.LikeTopBarFragment
+import com.dldmswo1209.dawnproject.topMenuFragment.MainTopBarFragment
+import com.dldmswo1209.dawnproject.topMenuFragment.MyPageTopBarFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
@@ -19,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var likeTopBarFragment: LikeTopBarFragment
     private lateinit var myPageTopBarFragment: MyPageTopBarFragment
     private lateinit var myPageFragment: MyPageFragment
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -26,8 +24,6 @@ class MainActivity : AppCompatActivity() {
 
         initFragment()
         bottomNavigationViewItemSelectedListener()
-
-
 
     }
     private fun initFragment(){
@@ -43,7 +39,7 @@ class MainActivity : AppCompatActivity() {
             when(it.itemId){
                 R.id.home -> topFragmentReplace(mainTopBarFragment)
                 R.id.category -> topFragmentReplace(mainTopBarFragment)
-                R.id.avatar -> topFragmentReplace(mainTopBarFragment)
+                R.id.avatar -> startActivity(Intent(this, AvatarActivity::class.java))
                 R.id.like -> topFragmentReplace(likeTopBarFragment)
                 R.id.myPage -> {
                     topFragmentReplace(myPageTopBarFragment)
@@ -62,6 +58,12 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction()
             .replace(R.id.mainContainerView, fragment)
             .commit()
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        binding.bottomNavigationView.selectedItemId = R.id.home
     }
 
 

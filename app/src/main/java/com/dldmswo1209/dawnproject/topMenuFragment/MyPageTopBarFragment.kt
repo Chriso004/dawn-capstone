@@ -1,4 +1,4 @@
-package com.dldmswo1209.dawnproject.topFragment
+package com.dldmswo1209.dawnproject.topMenuFragment
 
 import android.os.Bundle
 import android.view.View

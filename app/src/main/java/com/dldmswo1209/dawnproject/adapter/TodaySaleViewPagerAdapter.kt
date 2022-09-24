@@ -3,9 +3,8 @@ package com.dldmswo1209.dawnproject.adapter
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.dldmswo1209.dawnproject.MainTopMenuItems.TodaySaleFragment
-import com.dldmswo1209.dawnproject.R
-import com.dldmswo1209.dawnproject.dataClass.*
+import com.dldmswo1209.dawnproject.MainMenuFragment.TodaySaleFragment
+import com.dldmswo1209.dawnproject.model.*
 
 class TodaySaleViewPagerAdapter(
     fragmentActivity: FragmentActivity,

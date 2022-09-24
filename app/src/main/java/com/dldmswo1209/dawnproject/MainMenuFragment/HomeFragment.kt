@@ -1,4 +1,4 @@
-package com.dldmswo1209.dawnproject.MainTopMenuItems
+package com.dldmswo1209.dawnproject.MainMenuFragment
 
 import android.os.Bundle
 import android.os.Handler
@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.dldmswo1209.dawnproject.R
 import com.dldmswo1209.dawnproject.adapter.*
-import com.dldmswo1209.dawnproject.dataClass.*
+import com.dldmswo1209.dawnproject.model.*
 import com.dldmswo1209.dawnproject.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment(R.layout.fragment_home) {

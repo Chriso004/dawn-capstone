@@ -1,11 +1,11 @@
-package com.dldmswo1209.dawnproject.topFragment
+package com.dldmswo1209.dawnproject.topMenuFragment
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import com.dldmswo1209.dawnproject.LikeTopMenuItems.LikeCodyFragment
-import com.dldmswo1209.dawnproject.LikeTopMenuItems.LikeProductFragment
-import com.dldmswo1209.dawnproject.LikeTopMenuItems.LikeStoreFragment
+import com.dldmswo1209.dawnproject.LikeMenuFragment.LikeCodyFragment
+import com.dldmswo1209.dawnproject.LikeMenuFragment.LikeProductFragment
+import com.dldmswo1209.dawnproject.LikeMenuFragment.LikeStoreFragment
 import com.dldmswo1209.dawnproject.MainActivity
 import com.dldmswo1209.dawnproject.R
 import com.dldmswo1209.dawnproject.databinding.FragmentLikeTopBarBinding

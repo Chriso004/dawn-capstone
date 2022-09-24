@@ -1,10 +1,10 @@
-package com.dldmswo1209.dawnproject.MainTopMenuItems
+package com.dldmswo1209.dawnproject.MainMenuFragment
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import com.dldmswo1209.dawnproject.R
-import com.dldmswo1209.dawnproject.dataClass.ProductItem
+import com.dldmswo1209.dawnproject.model.ProductItem
 import com.dldmswo1209.dawnproject.databinding.FragmentTodaySaleBinding
 
 class TodaySaleFragment(val items: MutableList<ProductItem>) : Fragment(R.layout.fragment_today_sale) {

@@ -2,7 +2,7 @@ package com.dldmswo1209.dawnproject.adapter
 
 import android.widget.ImageView
 import com.dldmswo1209.dawnproject.R
-import com.dldmswo1209.dawnproject.dataClass.BannerItem
+import com.dldmswo1209.dawnproject.model.BannerItem
 import com.zhpan.bannerview.BaseBannerAdapter
 import com.zhpan.bannerview.BaseViewHolder
 

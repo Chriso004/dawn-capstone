@@ -1,4 +1,4 @@
-package com.dldmswo1209.dawnproject.dataClass
+package com.dldmswo1209.dawnproject.model
 
 data class CategoryItem(
     val image: Int,

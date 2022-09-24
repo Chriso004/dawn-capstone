@@ -3,7 +3,7 @@ package com.dldmswo1209.dawnproject.adapter
 import android.widget.ImageView
 import android.widget.TextView
 import com.dldmswo1209.dawnproject.R
-import com.dldmswo1209.dawnproject.dataClass.ProductItem
+import com.dldmswo1209.dawnproject.model.ProductItem
 import com.zhpan.bannerview.BaseBannerAdapter
 import com.zhpan.bannerview.BaseViewHolder
 

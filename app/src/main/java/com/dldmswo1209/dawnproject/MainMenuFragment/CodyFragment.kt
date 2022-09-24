@@ -1,9 +1,8 @@
-package com.dldmswo1209.dawnproject.MainTopMenuItems
+package com.dldmswo1209.dawnproject.MainMenuFragment
 
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -12,10 +11,9 @@ import androidx.viewpager2.widget.ViewPager2
 import com.dldmswo1209.dawnproject.R
 import com.dldmswo1209.dawnproject.adapter.BannerPagerAdapter
 import com.dldmswo1209.dawnproject.adapter.CodyListAdapter
-import com.dldmswo1209.dawnproject.dataClass.bannerImages
-import com.dldmswo1209.dawnproject.dataClass.codyRankList
+import com.dldmswo1209.dawnproject.model.bannerImages
+import com.dldmswo1209.dawnproject.model.codyRankList
 import com.dldmswo1209.dawnproject.databinding.FragmentCodyBinding
-import com.dldmswo1209.dawnproject.options.AgeOptionFragment
 import com.dldmswo1209.dawnproject.options.CodyFilterFragment
 
 class CodyFragment : Fragment(R.layout.fragment_cody) {

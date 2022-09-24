@@ -1,4 +1,4 @@
-package com.dldmswo1209.dawnproject.MainTopMenuItems
+package com.dldmswo1209.dawnproject.MainMenuFragment
 
 import android.os.Bundle
 import android.view.View
@@ -9,9 +9,9 @@ import com.dldmswo1209.dawnproject.R
 import com.dldmswo1209.dawnproject.adapter.BestProductListAdapter
 import com.dldmswo1209.dawnproject.adapter.RecommendCategoryListAdapter
 import com.dldmswo1209.dawnproject.adapter.RecommendProductListAdapter
-import com.dldmswo1209.dawnproject.dataClass.brandList
-import com.dldmswo1209.dawnproject.dataClass.productRankList
-import com.dldmswo1209.dawnproject.dataClass.shopList
+import com.dldmswo1209.dawnproject.model.brandList
+import com.dldmswo1209.dawnproject.model.productRankList
+import com.dldmswo1209.dawnproject.model.shopList
 import com.dldmswo1209.dawnproject.databinding.FragmentRecommendBinding
 
 class RecommendFragment : Fragment(R.layout.fragment_recommend) {

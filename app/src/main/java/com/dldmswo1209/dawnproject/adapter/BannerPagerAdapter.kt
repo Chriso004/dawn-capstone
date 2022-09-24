@@ -22,7 +22,7 @@ class BannerPagerAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(bannerImages[position])
+         holder.bind(bannerImages[position])
         if(position == bannerImages.size-1){
             viewPager2.post(runnable)
         }
