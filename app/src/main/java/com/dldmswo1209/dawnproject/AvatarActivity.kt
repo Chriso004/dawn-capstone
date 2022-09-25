@@ -40,7 +40,7 @@ class AvatarActivity : AppCompatActivity() {
         val avatar = ModelRenderable
             .builder()
             .setSource(
-                this, Uri.parse("models/model.glb")
+                this, Uri.parse("models/Ivan.glb")
             )
             .setIsFilamentGltf(true)
             .setAsyncLoadEnabled(true)
@@ -60,12 +60,12 @@ class AvatarActivity : AppCompatActivity() {
                 try{
                     val modelNode = Node()
                     modelNode.renderable = avatar.get()
-                    modelNode.localScale = Vector3(0.1f, 0.1f, 0.1f)
+                    modelNode.localScale = Vector3(0.01f, 0.01f, 0.01f)
                     modelNode.localRotation = Quaternion.axisAngle(
                         Vector3(0f, 1f, 0f),
                         0f
                     )
-                    modelNode.localPosition = Vector3(0f, 0f, -1f)
+                    modelNode.localPosition = Vector3(0f, -10f, -20f)
                     binding.avatarSceneView.scene.addChild(modelNode)
 
                     binding.avatarSceneView.setOnTouchListener { hitTestResult, motionEvent ->

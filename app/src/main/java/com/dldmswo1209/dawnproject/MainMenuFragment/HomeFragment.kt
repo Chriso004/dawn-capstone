@@ -1,22 +1,29 @@
 package com.dldmswo1209.dawnproject.MainMenuFragment
 
+import android.content.Context
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
+import android.util.TypedValue
 import android.view.View
+import android.widget.FrameLayout
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
+import com.dldmswo1209.dawnproject.MainActivity
 import com.dldmswo1209.dawnproject.R
 import com.dldmswo1209.dawnproject.adapter.*
 import com.dldmswo1209.dawnproject.model.*
 import com.dldmswo1209.dawnproject.databinding.FragmentHomeBinding
+import com.google.android.material.internal.ViewUtils.dpToPx
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
     private lateinit var binding: FragmentHomeBinding
     private val sliderImageHandler: Handler = Handler()
     private val sliderImageRunnable = Runnable { binding.mainAdImageViewPager.currentItem = binding.mainAdImageViewPager.currentItem + 1 }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -76,8 +83,27 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             }
         })
 
+        binding.homeScrollView.viewTreeObserver.addOnScrollChangedListener {
+            val context = context ?: return@addOnScrollChangedListener
+
+            if(binding.homeScrollView.scrollY > 150f.dpToPx(context).toInt()){
+                // 150px 만큼 스크롤 되면
+                if(!(activity as MainActivity).isMotionAnimating){
+                    (activity as MainActivity).startMotion()
+                }
+            }else{ // 150px 만큼 스크롤 되지 않은 경우
+                if(!(activity as MainActivity).isMotionAnimating){
+                    (activity as MainActivity).endMotion()
+                }
+            }
+        }
+
 
     }
+    fun Float.dpToPx(context: Context): Float =
+        TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, this, context.resources.displayMetrics)
+
+
     override fun onResume() {
         super.onResume()
         sliderImageHandler.postDelayed(sliderImageRunnable, 1000)
@@ -86,5 +112,10 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     override fun onPause() {
         super.onPause()
         sliderImageHandler.removeCallbacks(sliderImageRunnable)
+    }
+
+    override fun onDetach() {
+        super.onDetach()
+
     }
 }

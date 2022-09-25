@@ -7,35 +7,63 @@
     tools:context=".MainActivity">
 
     <FrameLayout
-        android:id="@+id/topContainerView"
+        android:id="@+id/otherTopContainerView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/topMotionLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/otherTopContainerView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layoutDescription="@xml/activity_main_scene">
+        <FrameLayout
+            android:id="@+id/homeTopContainerView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+
+    <FrameLayout
+        android:id="@+id/topTabContainerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topMotionLayout"/>
+
+
     <FrameLayout
         android:id="@+id/mainContainerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
-        app:layout_constraintTop_toBottomOf="@id/topContainerView" />
+        app:layout_constraintTop_toBottomOf="@id/topTabContainerView"
+        />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="0dp"
         android:layout_height="89dp"
-        app:menu="@menu/bottom_navigation_menu"
+        app:itemIconSize="45dp"
         app:itemIconTint="@drawable/selector_menu"
         app:itemRippleColor="@null"
         app:labelVisibilityMode="unlabeled"
-        app:itemIconSize="45dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
+        app:menu="@menu/bottom_navigation_menu" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

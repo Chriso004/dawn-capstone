@@ -1,10 +1,13 @@
 package com.dldmswo1209.dawnproject.MainMenuFragment
 
+import android.content.Context
 import android.os.Bundle
+import android.util.TypedValue
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.dldmswo1209.dawnproject.MainActivity
 import com.dldmswo1209.dawnproject.R
 import com.dldmswo1209.dawnproject.adapter.BestProductListAdapter
 import com.dldmswo1209.dawnproject.adapter.RecommendCategoryListAdapter
@@ -41,5 +44,23 @@ class RecommendFragment : Fragment(R.layout.fragment_recommend) {
             adapter = moreRecommendAdapter
             layoutManager = gridLayoutManager
         }
+
+        binding.brandScrollView.viewTreeObserver.addOnScrollChangedListener {
+            val context = context ?: return@addOnScrollChangedListener
+
+            if(binding.brandScrollView.scrollY > 150f.dpToPx(context).toInt()){
+                // 150px 만큼 스크롤 되면
+                if(!(activity as MainActivity).isMotionAnimating){
+                    (activity as MainActivity).startMotion()
+                }
+            }else{ // 150px 만큼 스크롤 되지 않은 경우
+                if(!(activity as MainActivity).isMotionAnimating){
+                    (activity as MainActivity).endMotion()
+                }
+            }
+        }
+
     }
+    fun Float.dpToPx(context: Context): Float =
+        TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, this, context.resources.displayMetrics)
 }

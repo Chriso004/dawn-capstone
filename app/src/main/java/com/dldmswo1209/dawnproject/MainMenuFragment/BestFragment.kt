@@ -1,6 +1,9 @@
 package com.dldmswo1209.dawnproject.MainMenuFragment
 
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
+import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +11,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.dldmswo1209.dawnproject.MainActivity
 import com.dldmswo1209.dawnproject.R
 import com.dldmswo1209.dawnproject.adapter.BestProductListAdapter
 import com.dldmswo1209.dawnproject.model.productRankList
@@ -67,5 +71,7 @@ class BestFragment : Fragment(R.layout.fragment_best) {
             }
             daySwitchOptionFragment.show(parentFragmentManager, daySwitchOptionFragment.tag)
         }
+
     }
+
 }

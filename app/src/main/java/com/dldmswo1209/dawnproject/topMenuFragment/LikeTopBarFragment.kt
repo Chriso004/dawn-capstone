@@ -29,7 +29,9 @@ class LikeTopBarFragment : Fragment(R.layout.fragment_like_top_bar) {
         likeCodyFragment = LikeCodyFragment()
         likeProductFragment = LikeProductFragment()
         likeStoreFragment = LikeStoreFragment()
-
+        if(!(activity as MainActivity).isMotionAnimating){
+            (activity as MainActivity).endMotion()
+        }
         (activity as MainActivity).mainFragmentReplace(likeProductFragment)
     }
     private fun mainTabSelectListener(){

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".topMenuFragment.MainTopFragment">
+
+    <ImageView
+        android:id="@+id/imageMark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_mark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="48dp"
+        android:layout_marginStart="12dp"/>
+
+    <TextView
+        android:id="@+id/dawn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dawn"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@id/imageMark"
+        app:layout_constraintTop_toTopOf="@id/imageMark"
+        app:layout_constraintBottom_toBottomOf="@id/imageMark"
+        android:layout_marginStart="6dp"/>
+
+    <ImageView
+        android:id="@+id/basketButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_basket"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/dawn"
+        app:layout_constraintBottom_toBottomOf="@id/dawn"
+        android:layout_marginEnd="25dp"/>
+
+    <ImageView
+        android:id="@+id/searchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_search"
+        app:layout_constraintEnd_toStartOf="@id/basketButton"
+        app:layout_constraintTop_toTopOf="@id/dawn"
+        app:layout_constraintBottom_toBottomOf="@id/dawn"
+        android:layout_marginEnd="30dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
