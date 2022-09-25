@@ -7,12 +7,13 @@
     <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginStart="7dp"
         android:layout_marginTop="30dp">
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="150dp"
-            android:layout_height="220dp"
+            android:layout_width="165dp"
+            android:layout_height="230dp"
             android:scaleType="fitXY"
             android:src="@drawable/brand_test_image1"/>
         <CheckBox
@@ -33,6 +34,7 @@
         android:textSize="14sp"
         android:textColor="#000000"
         android:textStyle="bold"
+        android:layout_marginStart="7dp"
         android:layout_marginTop="5dp"/>
     <TextView
         android:id="@+id/tagTextView"
@@ -41,6 +43,7 @@
         android:text="#캠퍼스룩 #캐주얼 #여행룩 #데이트룩 #일상룩"
         android:textSize="10sp"
         android:textColor="#000000"
-        android:layout_marginTop="2dp"/>
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="7dp"/>
 
 </androidx.appcompat.widget.LinearLayoutCompat>

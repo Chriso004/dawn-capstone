@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainMenuFragment.TodaySaleFragment"
@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginEnd="20dp">
+            android:layout_marginEnd="7dp">
             <FrameLayout
                 android:id="@+id/item1ImageFrameLayout"
                 android:layout_width="wrap_content"
@@ -24,8 +24,8 @@
 
                 <ImageView
                     android:id="@+id/item1ImageView"
-                    android:layout_width="150dp"
-                    android:layout_height="160dp"
+                    android:layout_width="170dp"
+                    android:layout_height="180dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/test_image" />
 
@@ -95,8 +95,8 @@
 
                 <ImageView
                     android:id="@+id/item2ImageView"
-                    android:layout_width="150dp"
-                    android:layout_height="160dp"
+                    android:layout_width="170dp"
+                    android:layout_height="180dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/test_image2" />
 
@@ -167,7 +167,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginEnd="20dp">
+            android:layout_marginEnd="7dp">
             <FrameLayout
                 android:id="@+id/item3ImageFrameLayout"
                 android:layout_width="wrap_content"
@@ -175,8 +175,8 @@
 
                 <ImageView
                     android:id="@+id/item3ImageView"
-                    android:layout_width="150dp"
-                    android:layout_height="160dp"
+                    android:layout_width="170dp"
+                    android:layout_height="180dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/test_image" />
 
@@ -244,8 +244,8 @@
 
                 <ImageView
                     android:id="@+id/item4ImageView"
-                    android:layout_width="150dp"
-                    android:layout_height="160dp"
+                    android:layout_width="170dp"
+                    android:layout_height="180dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/test_image" />
 
