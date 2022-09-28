@@ -55,6 +55,7 @@
         <entry key="app/src/main/res/drawable/selector_radio_button.xml" value="0.1285" />
         <entry key="app/src/main/res/drawable/selector_radio_text.xml" value="0.1285" />
         <entry key="app/src/main/res/drawable/selector_thumb.xml" value="0.1285" />
+        <entry key="app/src/main/res/layout/activity_avatar.xml" value="0.2536231884057971" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.2569905598958333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.24169616699218752" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.25173802413339674" />
@@ -83,7 +84,7 @@
         <entry key="app/src/main/res/layout/fragment_my_page_top_bar.xml" value="0.1766304347826087" />
         <entry key="app/src/main/res/layout/fragment_new_product.xml" value="0.28072916666666664" />
         <entry key="app/src/main/res/layout/fragment_recommend.xml" value="0.2169811320754717" />
-        <entry key="app/src/main/res/layout/fragment_sale.xml" value="0.2264724731445313" />
+        <entry key="app/src/main/res/layout/fragment_sale.xml" value="0.21282943809050223" />
         <entry key="app/src/main/res/layout/fragment_shop.xml" value="0.28072916666666664" />
         <entry key="app/src/main/res/layout/fragment_store.xml" value="0.2947916666666667" />
         <entry key="app/src/main/res/layout/fragment_today_sale.xml" value="0.23490193684895833" />

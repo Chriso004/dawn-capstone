@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.view.MotionEvent
 import com.dldmswo1209.dawnproject.databinding.ActivityAvatarBinding
 import com.dldmswo1209.dawnproject.databinding.ActivityMainBinding
-import com.google.ar.sceneform.Node
 import com.google.ar.sceneform.math.Quaternion
 import com.google.ar.sceneform.math.Vector3
 import com.google.ar.sceneform.rendering.ModelRenderable
@@ -40,7 +39,7 @@ class AvatarActivity : AppCompatActivity() {
         val avatar = ModelRenderable
             .builder()
             .setSource(
-                this, Uri.parse("models/Ivan.glb")
+                this, Uri.parse("models/model_5.glb")
             )
             .setIsFilamentGltf(true)
             .setAsyncLoadEnabled(true)
@@ -58,14 +57,14 @@ class AvatarActivity : AppCompatActivity() {
         CompletableFuture.allOf(avatar, backdrop)
             .handle<Any?>{ok: Void?, ex: Throwable? ->
                 try{
-                    val modelNode = Node()
+                    val modelNode = com.google.ar.sceneform.Node()
                     modelNode.renderable = avatar.get()
-                    modelNode.localScale = Vector3(0.01f, 0.01f, 0.01f)
+                    modelNode.localScale = Vector3(0.1f, 0.1f, 0.1f)
                     modelNode.localRotation = Quaternion.axisAngle(
                         Vector3(0f, 1f, 0f),
                         0f
                     )
-                    modelNode.localPosition = Vector3(0f, -10f, -20f)
+                    modelNode.localPosition = Vector3(0f, 0f, -1f)
                     binding.avatarSceneView.scene.addChild(modelNode)
 
                     binding.avatarSceneView.setOnTouchListener { hitTestResult, motionEvent ->
