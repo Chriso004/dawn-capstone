@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dawn</title>
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+
+<body>
+    <div class="sign-container">
+        <h2>회원가입</h2>
+        <form class="sign-form">
+            <div class="email-container sign-div">
+                <span>이메일</span><br>
+                <input type="text" name="email" placeholder="dawn@email.com" required>
+            </div>
+            <div class="pwd-container sign-div">
+                <span>비밀번호</span><br>
+                <input type="text" name="pwd" placeholder="숫자, 영문, 특수문자 조합 최소 8자 이상" required><br>
+                <input type="text" name="pwd-rep" placeholder="비밀번호 재입력" required><br>
+            </div>
+            <div class="nickname-container sign-div">
+                <span>닉네임</span><br>
+                <input type="text" name="nickname" placeholder="닉네임 입력(2~15자 이내)" required>
+            </div>
+            <div class="recommend-container sign-div">
+                <span>추천인 아이디</span><br>
+                <input type="text" name="recommend">
+            </div>
+            <div class="terms-container sign-div">
+                <div class="all-agree">
+                    <input type="checkbox" name="all-terms"> 약관 전체동의하기
+                </div>
+                <div class="terms-agree">
+                    <input type="checkbox" name="term1"> [필수] 만 14세 이상입니다.<br>
+                    <input type="checkbox" name="term2"> [필수] 서비스 이용약관에 동의<br>
+                    <input type="checkbox" name="term3"> [필수] 개인정보 수집 이용약관에 동의<br>
+                    <input type="checkbox" name="term4"> [선택] 마케팅 활용 및 광고성 정보 수신 동의<br>
+                </div>
+            </div>
+            <button type="submit" class="auth-btn">본인인증 하러 가기</button>
+        </form>
+    </div>
+</body>
+<script src="js/signup.js"></script>
+
+</html>

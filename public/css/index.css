@@ -1,0 +1,28 @@
+@import "reset.css";
+
+body{
+    width: 100%;
+    height: 100vh;
+}
+
+.login-container {
+    display: block;
+    width: 20%;
+    margin: 0 auto;
+    margin-top: 20%;
+    background-color: aquamarine;
+}
+
+.login-container .login-form input {
+    padding: 5px;
+    margin: 5px;
+}
+
+.login-container .login-form .login-id, .login-password {
+    width: 200px;
+}
+
+.login-container .login-form .login-btn {
+    padding: 5px;
+    width: 230px;
+}
