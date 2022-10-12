@@ -11,21 +11,9 @@ const login = async (e) => {
         pwd: pwd
     };
 
-    const response = await postData(data);
+    const response = await axios.post("user/login/", data);
     console.log(response);
 }
 
-const postData = async (data) => {
-    const response = await fetch("/user/login", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
-    });
-    
-    const resData = await response.json();
-    return resData;
-} 
 
 loginForm.addEventListener("submit", login);
