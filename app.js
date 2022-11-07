@@ -24,7 +24,9 @@ app.set("port", process.env.PORT || 3000);
 app.engine("html", ejs.renderFile);
 app.set("view engine", "html");
 app.set("views", path.join(__dirname, "views"));
+app.set("img", path.join(__dirname, "public", "img"));
 app.use(express.static(path.join(__dirname, "public")));
+
 /* 라우팅 설정 */
 app.use("/", routes);
 
