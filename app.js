@@ -18,7 +18,7 @@ app.use(cookieParser());
 app.use(morgan("dev"));
 
 /* port설정 */
-app.set("port", process.env.PORT || 3000);
+app.set("port", process.env.PORT || 8080);
 
 /* 경로, 파일 옵션 설정 */
 app.engine("html", ejs.renderFile);

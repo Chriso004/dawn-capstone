@@ -1,5 +1,3 @@
-const getGoods = 
-
 module.exports = {
     getGoods: (req, res) => {
         try {
