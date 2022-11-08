@@ -9,7 +9,26 @@
     <com.google.ar.sceneform.SceneView
         android:id="@+id/avatarSceneView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="500dp"
+        android:layout_gravity="top"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="눌러!!"
+        android:layout_gravity="start|bottom"
+        android:layout_margin="100dp"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="신발"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="100dp"/>
+
+
 
 
 </FrameLayout>

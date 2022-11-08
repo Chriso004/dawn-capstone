@@ -7,9 +7,11 @@ import android.os.Bundle
 import android.view.MotionEvent
 import com.dldmswo1209.dawnproject.databinding.ActivityAvatarBinding
 import com.dldmswo1209.dawnproject.databinding.ActivityMainBinding
+import com.google.ar.sceneform.Node
 import com.google.ar.sceneform.math.Quaternion
 import com.google.ar.sceneform.math.Vector3
 import com.google.ar.sceneform.rendering.ModelRenderable
+import kotlinx.coroutines.*
 import java.util.concurrent.CompletableFuture
 import java.util.concurrent.ExecutionException
 import kotlin.math.abs
@@ -26,20 +28,52 @@ class AvatarActivity : AppCompatActivity() {
     private val binding by lazy {
         ActivityAvatarBinding.inflate(layoutInflater)
     }
+    private val nodeList = mutableListOf<Node>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
         binding.avatarSceneView.setTransparent(true)
-        loadModel()
+        loadModel("models/hide_test.glb")
+
+        binding.button.setOnClickListener {
+            CoroutineScope(Dispatchers.Main).launch {
+                async {
+                    loadModel("models/basic3.glb")
+                    delay(100)
+                }.await()
+
+                nodeList.firstOrNull {
+                    binding.avatarSceneView.scene.onRemoveChild(it)
+                    nodeList.removeFirst()
+                    true
+                }
+            }
+
+        }
+        binding.button2.setOnClickListener {
+
+            CoroutineScope(Dispatchers.Main).launch {
+                async {
+                    loadModel("models/basic2.glb")
+                    delay(100)
+                }.await()
+
+                nodeList.firstOrNull {
+                    binding.avatarSceneView.scene.onRemoveChild(it)
+                    nodeList.removeFirst()
+                    true
+                }
+            }
+        }
     }
     @SuppressLint("ClickableViewAccessibility")
-    private fun loadModel(){
+    private fun loadModel(url: String){
         val avatar = ModelRenderable
             .builder()
             .setSource(
-                this, Uri.parse("models/test_model.glb")
+                this, Uri.parse(url)
             )
             .setIsFilamentGltf(true)
             .setAsyncLoadEnabled(true)
@@ -57,15 +91,16 @@ class AvatarActivity : AppCompatActivity() {
         CompletableFuture.allOf(avatar, backdrop)
             .handle<Any?>{ok: Void?, ex: Throwable? ->
                 try{
-                    val modelNode = com.google.ar.sceneform.Node()
+                    val modelNode = Node()
                     modelNode.renderable = avatar.get()
                     modelNode.localScale = Vector3(0.1f, 0.1f, 0.1f)
                     modelNode.localRotation = Quaternion.axisAngle(
                         Vector3(0f, 1f, 0f),
                         0f
                     )
-                    modelNode.localPosition = Vector3(0f, -0.1f, -0.5f)
+                    modelNode.localPosition = Vector3(0f, -0.1f, -0.1f)
                     binding.avatarSceneView.scene.addChild(modelNode)
+                    nodeList.add(modelNode)
 
                     binding.avatarSceneView.setOnTouchListener { hitTestResult, motionEvent ->
                         if(motionEvent.action == MotionEvent.ACTION_DOWN){
