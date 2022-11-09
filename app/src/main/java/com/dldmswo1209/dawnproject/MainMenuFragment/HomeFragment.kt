@@ -3,6 +3,7 @@ package com.dldmswo1209.dawnproject.MainMenuFragment
 import android.content.Context
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import android.util.TypedValue
 import android.view.View
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.dldmswo1209.dawnproject.MainActivity
+import com.dldmswo1209.dawnproject.ProductDetailFragment
 import com.dldmswo1209.dawnproject.R
 import com.dldmswo1209.dawnproject.adapter.*
 import com.dldmswo1209.dawnproject.model.*
@@ -21,7 +23,7 @@ import com.google.android.material.internal.ViewUtils.dpToPx
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
     private lateinit var binding: FragmentHomeBinding
-    private val sliderImageHandler: Handler = Handler()
+    private val sliderImageHandler: Handler = Handler(Looper.getMainLooper())
     private val sliderImageRunnable = Runnable { binding.mainAdImageViewPager.currentItem = binding.mainAdImageViewPager.currentItem + 1 }
 
 
@@ -32,8 +34,12 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         val categoryListAdapter = HomeCategoryListAdapter()
         val todaySalePagerAdapter = TodaySaleViewPagerAdapter(requireActivity())
         val codyRankListAdapter = CodyRankListAdapter()
-        val productRankListAdapter = ProductRankListAdapter()
-        val recommendListAdapter = RecommendListAdapter()
+        val productRankListAdapter = ProductRankListAdapter{
+            (activity as MainActivity).goProductDetailPage()
+        }
+        val recommendListAdapter = RecommendListAdapter{
+            (activity as MainActivity).goProductDetailPage()
+        }
         val bannerPagerAdapter = BannerPagerAdapter(bannerImages, binding.mainAdImageViewPager)
 
         codyRankListAdapter.submitList(codyRankList)
@@ -100,6 +106,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
 
     }
+
+
     fun Float.dpToPx(context: Context): Float =
         TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, this, context.resources.displayMetrics)
 

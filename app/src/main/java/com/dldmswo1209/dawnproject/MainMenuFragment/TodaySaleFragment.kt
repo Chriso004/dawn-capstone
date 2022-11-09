@@ -3,6 +3,8 @@ package com.dldmswo1209.dawnproject.MainMenuFragment
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import com.dldmswo1209.dawnproject.MainActivity
+import com.dldmswo1209.dawnproject.ProductDetailFragment
 import com.dldmswo1209.dawnproject.R
 import com.dldmswo1209.dawnproject.model.ProductItem
 import com.dldmswo1209.dawnproject.databinding.FragmentTodaySaleBinding
@@ -37,6 +39,19 @@ class TodaySaleFragment(val items: MutableList<ProductItem>) : Fragment(R.layout
             item3DetailTextView.text = items[3].detail
             item3SaleTextView.text = items[3].sale
             item3PriceTextView.text = items[3].price
+
+            root.setOnClickListener {
+                for(fragment: Fragment in (activity as MainActivity).mainFragment) {
+                    if (fragment.isVisible) {
+                        // 코드 입력
+                        (activity as MainActivity).previousFragment = fragment
+                    }
+                }
+                (activity as MainActivity).mainFragmentReplace(ProductDetailFragment())
+                (activity as MainActivity).bottomNavigationStartMotion()
+                (activity as MainActivity).topTabStartMotion()
+                (activity as MainActivity).startMotion()
+            }
         }
 
 

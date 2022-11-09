@@ -21,6 +21,7 @@ class CodyRankListAdapter: ListAdapter<CodyRankItem,CodyRankListAdapter.ViewHold
                 currentList[adapterPosition].like = !currentList[adapterPosition].like
                 notifyDataSetChanged()
             }
+
         }
     }
 

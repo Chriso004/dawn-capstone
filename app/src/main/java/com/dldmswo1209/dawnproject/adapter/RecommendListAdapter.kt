@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.dldmswo1209.dawnproject.model.ProductItem
 import com.dldmswo1209.dawnproject.databinding.RecommendItemBinding
 
-class RecommendListAdapter: ListAdapter<ProductItem, RecommendListAdapter.ViewHolder>(diffUtil) {
+class RecommendListAdapter(val itemClicked: (ProductItem)->(Unit)): ListAdapter<ProductItem, RecommendListAdapter.ViewHolder>(diffUtil) {
     inner class ViewHolder(private val binding: RecommendItemBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(productItem: ProductItem){
             binding.imageView.setImageResource(productItem.image)
@@ -17,6 +17,10 @@ class RecommendListAdapter: ListAdapter<ProductItem, RecommendListAdapter.ViewHo
             binding.saleTextView.text = productItem.sale
             binding.priceTextView.text = productItem.price
             binding.likeButton.isChecked = productItem.like
+
+            binding.root.setOnClickListener {
+                itemClicked(productItem)
+            }
         }
     }
 

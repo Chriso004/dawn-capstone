@@ -9,8 +9,6 @@ import com.dldmswo1209.dawnproject.model.*
 class TodaySaleViewPagerAdapter(
     fragmentActivity: FragmentActivity,
 ): FragmentStateAdapter(fragmentActivity) {
-
-
     override fun getItemCount(): Int = 5
 
     override fun createFragment(position: Int): Fragment {

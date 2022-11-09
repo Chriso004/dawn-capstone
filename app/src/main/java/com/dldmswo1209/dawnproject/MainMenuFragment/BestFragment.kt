@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dldmswo1209.dawnproject.MainActivity
+import com.dldmswo1209.dawnproject.ProductDetailFragment
 import com.dldmswo1209.dawnproject.R
 import com.dldmswo1209.dawnproject.adapter.BestProductListAdapter
 import com.dldmswo1209.dawnproject.model.productRankList
@@ -31,7 +32,9 @@ class BestFragment : Fragment(R.layout.fragment_best) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentBestBinding.bind(view)
 
-        val bestProductListAdapter = BestProductListAdapter()
+        val bestProductListAdapter = BestProductListAdapter{
+            (activity as MainActivity).goProductDetailPage()
+        }
         bestProductListAdapter.submitList(productRankList)
         val gridLayoutManager = GridLayoutManager(context, 2, LinearLayoutManager.VERTICAL, false)
         binding.bestRecyclerView.apply {

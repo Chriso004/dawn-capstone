@@ -27,7 +27,9 @@ class RecommendFragment : Fragment(R.layout.fragment_recommend) {
         val recommendBrandProductListAdapter = RecommendProductListAdapter()
         val recommendShopListAdapter = RecommendCategoryListAdapter()
         val recommendShopProductListAdapter = RecommendProductListAdapter()
-        val moreRecommendAdapter = BestProductListAdapter()
+        val moreRecommendAdapter = BestProductListAdapter{
+            (activity as MainActivity).goProductDetailPage()
+        }
         val gridLayoutManager = GridLayoutManager(context, 2, LinearLayoutManager.VERTICAL, false)
 
         recommendBrandListAdapter.submitList(brandList)

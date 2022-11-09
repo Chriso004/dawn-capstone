@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.dldmswo1209.dawnproject.model.ProductItem
 import com.dldmswo1209.dawnproject.databinding.BestProductItemBinding
 
-class BestProductListAdapter: ListAdapter<ProductItem, BestProductListAdapter.ViewHolder>(diffUtil) {
+class BestProductListAdapter(val itemClicked: (ProductItem)->(Unit)): ListAdapter<ProductItem, BestProductListAdapter.ViewHolder>(diffUtil) {
     inner class ViewHolder(private val binding: BestProductItemBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(productItem: ProductItem){
             binding.itemImageView.setImageResource(productItem.image)
@@ -20,6 +20,10 @@ class BestProductListAdapter: ListAdapter<ProductItem, BestProductListAdapter.Vi
             binding.likeButton.setOnClickListener {
                 currentList[adapterPosition].like = !currentList[adapterPosition].like
                 notifyDataSetChanged()
+            }
+
+            binding.root.setOnClickListener {
+                itemClicked(productItem)
             }
         }
     }

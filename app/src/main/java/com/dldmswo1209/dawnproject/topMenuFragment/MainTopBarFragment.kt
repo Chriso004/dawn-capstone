@@ -71,6 +71,12 @@ class MainTopBarFragment : Fragment(R.layout.fragment_top_bar) {
 
             override fun onTabReselected(tab: TabLayout.Tab?) {}
         })
+
+        performClickTab(3)
+    }
+
+    fun performClickTab(index: Int){
+
     }
     private fun initFragment(){
         homeFragment = HomeFragment()

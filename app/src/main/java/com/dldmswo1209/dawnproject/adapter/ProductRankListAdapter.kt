@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.dldmswo1209.dawnproject.model.ProductItem
 import com.dldmswo1209.dawnproject.databinding.ProductRankItemBinding
 
-class ProductRankListAdapter: ListAdapter<ProductItem, ProductRankListAdapter.ViewHolder>(diffUtil) {
+class ProductRankListAdapter(val itemClicked: (ProductItem) -> (Unit)): ListAdapter<ProductItem, ProductRankListAdapter.ViewHolder>(diffUtil) {
     inner class ViewHolder(private val binding: ProductRankItemBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(productItem: ProductItem){
             binding.itemImageView.setImageResource(productItem.image)
@@ -17,6 +17,10 @@ class ProductRankListAdapter: ListAdapter<ProductItem, ProductRankListAdapter.Vi
             binding.saleTextView.text = productItem.sale
             binding.priceTextView.text = productItem.price
             binding.likeButton.isChecked = productItem.like
+
+            binding.root.setOnClickListener {
+                itemClicked(productItem)
+            }
         }
     }
 

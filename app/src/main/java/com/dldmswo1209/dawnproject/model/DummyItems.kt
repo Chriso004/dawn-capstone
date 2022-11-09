@@ -103,3 +103,11 @@ val shopList = mutableListOf(
     CategoryItem(R.drawable.brand_test_image,"어반라인"),
     CategoryItem(R.drawable.brand_test_image, "베이델리"),
 )
+
+val detailImage = mutableListOf(
+    R.drawable.detail_img_1,
+    R.drawable.detail_img_2,
+    R.drawable.detail_img_3,
+    R.drawable.detail_img_4,
+    R.drawable.detail_img_5,
+)

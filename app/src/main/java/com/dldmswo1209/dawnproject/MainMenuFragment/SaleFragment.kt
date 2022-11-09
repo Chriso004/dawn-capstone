@@ -26,7 +26,9 @@ class SaleFragment : Fragment(R.layout.fragment_sale) {
         binding = FragmentSaleBinding.bind(view)
 
         val brandSaleAdapter1 = RecommendProductListAdapter()
-        val moreRecommendAdapter = BestProductListAdapter()
+        val moreRecommendAdapter = BestProductListAdapter{
+            (activity as MainActivity).goProductDetailPage()
+        }
         brandSaleAdapter1.submitList(recommendList)
         moreRecommendAdapter.submitList(productRankList)
         setupViewPager(binding.root)

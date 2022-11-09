@@ -9,7 +9,7 @@ import android.util.TypedValue
 import androidx.constraintlayout.motion.widget.MotionLayout
 import androidx.fragment.app.Fragment
 import com.dldmswo1209.dawnproject.LikeMenuFragment.LikeProductFragment
-import com.dldmswo1209.dawnproject.MainMenuFragment.HomeFragment
+import com.dldmswo1209.dawnproject.MainMenuFragment.*
 import com.dldmswo1209.dawnproject.databinding.ActivityMainBinding
 import com.dldmswo1209.dawnproject.myPage.MyPageFragment
 import com.dldmswo1209.dawnproject.topMenuFragment.LikeTopBarFragment
@@ -19,13 +19,39 @@ import com.dldmswo1209.dawnproject.topMenuFragment.MyPageTopBarFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
-    private lateinit var mainTopBarFragment: MainTopBarFragment
+    lateinit var mainTopBarFragment: MainTopBarFragment
     private lateinit var likeTopBarFragment: LikeTopBarFragment
     private lateinit var myPageTopBarFragment: MyPageTopBarFragment
-    private lateinit var myPageFragment: MyPageFragment
     private lateinit var mainTopFragment: MainTopFragment
-    private lateinit var homeFragment: HomeFragment
+    private lateinit var productDetailFragment: ProductDetailFragment
+    var previousFragment : Fragment = HomeFragment()
+
+    val myPageFragment = MyPageFragment()
+    val homeFragment = HomeFragment()
+    val bestFragment = BestFragment()
+    val recommendFragment = RecommendFragment()
+    val codyFragment = CodyFragment()
+    val brandFragment = BrandFragment()
+    val shopFragment = ShopFragment()
+    val saleFragment = SaleFragment()
+    val newProductFragment = NewProductFragment()
+    val eventFragment = EventFragment()
+    val storeFragment = StoreFragment()
     var isMotionAnimating = false
+
+    val mainFragment = mutableListOf(
+        homeFragment,
+        myPageFragment,
+        bestFragment,
+        recommendFragment,
+        codyFragment,
+        brandFragment,
+        shopFragment,
+        saleFragment,
+        newProductFragment,
+        eventFragment,
+        storeFragment
+    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -71,14 +97,36 @@ class MainActivity : AppCompatActivity() {
         binding.topMotionLayout.transitionToStart()
     }
 
+    fun bottomNavigationStartMotion(){
+        binding.bottomNavigationViewMotionLayout.transitionToEnd()
+    }
+
+    fun bottomNavigationEndMotion(){
+        binding.bottomNavigationViewMotionLayout.transitionToStart()
+    }
+    fun topTabStartMotion(){
+        binding.topTabMotionLayout.transitionToEnd()
+    }
+    fun topTabEndMotion(){
+        binding.topTabMotionLayout.transitionToStart()
+    }
+
+    fun goProductDetailPage(){
+        previousFragment = supportFragmentManager.findFragmentById(R.id.mainContainerView) ?: return
+
+        mainFragmentReplace(ProductDetailFragment())
+        bottomNavigationStartMotion()
+        topTabStartMotion()
+        startMotion()
+    }
+
 
     private fun initFragment(){
         mainTopBarFragment = MainTopBarFragment()
         likeTopBarFragment = LikeTopBarFragment()
         myPageTopBarFragment = MyPageTopBarFragment()
-        myPageFragment = MyPageFragment()
         mainTopFragment = MainTopFragment()
-        homeFragment = HomeFragment()
+        productDetailFragment = ProductDetailFragment()
 
         topFragmentReplace(mainTopFragment)
         mainTopFragmentReplace(mainTopBarFragment)
