@@ -11,6 +11,7 @@
         android:theme="@style/Theme.DawnProject">
         <activity
             android:name=".AvatarActivity"
+            android:theme="@style/Theme.DawnProject.Avatar"
             android:exported="false" />
 
         <meta-data

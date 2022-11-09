@@ -18,7 +18,9 @@ import com.dldmswo1209.dawnproject.topMenuFragment.MainTopFragment
 import com.dldmswo1209.dawnproject.topMenuFragment.MyPageTopBarFragment
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var binding : ActivityMainBinding
+    private val binding by lazy{
+        ActivityMainBinding.inflate(layoutInflater)
+    }
     lateinit var mainTopBarFragment: MainTopBarFragment
     private lateinit var likeTopBarFragment: LikeTopBarFragment
     private lateinit var myPageTopBarFragment: MyPageTopBarFragment
@@ -55,7 +57,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         initFragment()

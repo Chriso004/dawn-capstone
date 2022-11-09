@@ -32,4 +32,13 @@
     <style name="Theme.DawnProject.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.DawnProject.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Theme.DawnProject.Avatar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/black</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+
 </resources>

@@ -6,29 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".AvatarActivity">
 
-    <com.google.ar.sceneform.SceneView
-        android:id="@+id/avatarSceneView"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:layout_gravity="top"/>
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="눌러!!"
-        android:layout_gravity="start|bottom"
-        android:layout_margin="100dp"/>
+        <com.google.ar.sceneform.SceneView
+            android:id="@+id/avatarSceneView"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="눌러!!"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="100dp"/>
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="신발"
-        android:layout_gravity="end|bottom"
-        android:layout_margin="100dp"/>
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="신발"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="100dp"/>
 
 
-
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

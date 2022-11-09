@@ -1,9 +1,11 @@
 package com.dldmswo1209.dawnproject
 
 import android.annotation.SuppressLint
+import android.app.Notification
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.MotionEvent
 import com.dldmswo1209.dawnproject.databinding.ActivityAvatarBinding
 import com.dldmswo1209.dawnproject.databinding.ActivityMainBinding
@@ -20,11 +22,8 @@ import kotlin.math.sin
 
 class AvatarActivity : AppCompatActivity() {
     private var downX = 0f
-    private var downY = 0f
     private var xAngle = 0f
-    private var yAngle = 0f
     private var lastXAngle = 0f
-    private var lastYAngle = 0f
     private val binding by lazy {
         ActivityAvatarBinding.inflate(layoutInflater)
     }
@@ -35,45 +34,45 @@ class AvatarActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.avatarSceneView.setTransparent(true)
+
         loadModel("models/hide_test.glb")
 
         binding.button.setOnClickListener {
             CoroutineScope(Dispatchers.Main).launch {
                 async {
                     loadModel("models/basic3.glb")
-                    delay(100)
+                    delay(200)
                 }.await()
 
                 nodeList.firstOrNull {
-                    binding.avatarSceneView.scene.onRemoveChild(it)
+                    binding.avatarSceneView.scene.removeChild(it)
                     nodeList.removeFirst()
                     true
                 }
             }
-
         }
         binding.button2.setOnClickListener {
-
             CoroutineScope(Dispatchers.Main).launch {
                 async {
                     loadModel("models/basic2.glb")
-                    delay(100)
+                    delay(200)
                 }.await()
 
                 nodeList.firstOrNull {
-                    binding.avatarSceneView.scene.onRemoveChild(it)
+                    binding.avatarSceneView.scene.removeChild(it)
                     nodeList.removeFirst()
                     true
                 }
             }
         }
     }
+
     @SuppressLint("ClickableViewAccessibility")
-    private fun loadModel(url: String){
+    private fun loadModel(path: String){
         val avatar = ModelRenderable
             .builder()
             .setSource(
-                this, Uri.parse(url)
+                this, Uri.parse(path)
             )
             .setIsFilamentGltf(true)
             .setAsyncLoadEnabled(true)
@@ -91,49 +90,36 @@ class AvatarActivity : AppCompatActivity() {
         CompletableFuture.allOf(avatar, backdrop)
             .handle<Any?>{ok: Void?, ex: Throwable? ->
                 try{
-                    val modelNode = Node()
+                    val modelNode = com.google.ar.sceneform.Node()
                     modelNode.renderable = avatar.get()
                     modelNode.localScale = Vector3(0.1f, 0.1f, 0.1f)
                     modelNode.localRotation = Quaternion.axisAngle(
                         Vector3(0f, 1f, 0f),
                         0f
                     )
-                    modelNode.localPosition = Vector3(0f, -0.1f, -0.1f)
+                    modelNode.localPosition = Vector3(0f, -0.1f, -0.12f)
                     binding.avatarSceneView.scene.addChild(modelNode)
                     nodeList.add(modelNode)
 
                     binding.avatarSceneView.setOnTouchListener { hitTestResult, motionEvent ->
                         if(motionEvent.action == MotionEvent.ACTION_DOWN){
                             downX = motionEvent.x
-                            downY = motionEvent.y
 
                         }else if(motionEvent.action == MotionEvent.ACTION_MOVE){
-                            if(abs(motionEvent.x - downX) > 40 || abs(motionEvent.y - downY) > 40){
+                            if(abs(motionEvent.x - downX) > 40){
                                 var x: Float = motionEvent.x - downX
-                                var y: Float = motionEvent.y - downY
-
                                 var percentX: Float = x / binding.avatarSceneView.width * 0.6f
-                                var percentY: Float = y / binding.avatarSceneView.height * 0.6f
 
                                 xAngle = percentX * 360 * 0.52f + lastXAngle
-                                yAngle = percentY * 360 * 0.52f + lastYAngle
 
                                 var xQuaternion = Quaternion.axisAngle(Vector3(0f,1f,0f), xAngle)
-                                var yQuaternion = Quaternion.axisAngle(
-                                    Vector3(
-                                        cos(Math.toRadians(xAngle.toDouble())).toFloat(),
-                                        0f,
-                                        sin(Math.toRadians(xAngle.toDouble())).toFloat()
-                                    ), yAngle
+                                var yQuaternion = Quaternion.axisAngle(Vector3(0f, 0f, 0f), 0f
                                 )
                                 modelNode.localRotation = Quaternion.multiply(xQuaternion, yQuaternion)
-
                             }
-
 
                         }else if(motionEvent.action == MotionEvent.ACTION_UP){
                             lastXAngle = xAngle
-                            lastYAngle = yAngle
                         }
 
                         true
@@ -143,7 +129,7 @@ class AvatarActivity : AppCompatActivity() {
                 null
             }
     }
-
+    
     override fun onResume() {
         super.onResume()
         binding.avatarSceneView.resume()

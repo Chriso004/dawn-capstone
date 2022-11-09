@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="130dp"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/brand_test_image1"/>
+        <CheckBox
+            android:id="@+id/thumbButton"
+            android:layout_width="24dp"
+            android:layout_height="22dp"
+            android:background="@drawable/selector_thumb"
+            android:button="@null"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="10dp"/>
+    </FrameLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

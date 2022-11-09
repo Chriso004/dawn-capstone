@@ -10,14 +10,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
-import com.dldmswo1209.dawnproject.adapter.BannerPagerAdapter
+import com.dldmswo1209.dawnproject.adapter.*
 import com.dldmswo1209.dawnproject.databinding.FragmentProductDetailBinding
+import com.dldmswo1209.dawnproject.model.codyRankList
 import com.dldmswo1209.dawnproject.model.detailImage
+import com.dldmswo1209.dawnproject.model.productRankList
 
 class ProductDetailFragment : Fragment() {
     private lateinit var binding: FragmentProductDetailBinding
-    private val sliderImageHandler: Handler = Handler(Looper.getMainLooper())
-    private val sliderImageRunnable = Runnable { binding.ImageViewPager.currentItem = binding.ImageViewPager.currentItem + 1 }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,18 +35,24 @@ class ProductDetailFragment : Fragment() {
         }
 
         val viewPagerAdapter = BannerPagerAdapter(detailImage, binding.ImageViewPager)
+        val codyAdapter = DetailCodyAdapter()
+        val contentAdapter = DetailContentAdapter()
+        val recommendAdapter = ProductRankListAdapter{}
+        val recommendAdapter2 = ProductRankListAdapter{}
+        codyAdapter.submitList(codyRankList)
+        contentAdapter.submitList(detailImage)
+        recommendAdapter.submitList(productRankList)
+        recommendAdapter2.submitList(productRankList)
+
+        binding.codyRecyclerView.adapter = codyAdapter
+        binding.ContentImageRecyclerView.adapter = contentAdapter
+        binding.recommendRecyclerView.adapter = recommendAdapter
+        binding.recommendRecyclerView2.adapter = recommendAdapter2
 
         binding.ImageViewPager.apply {
             adapter = viewPagerAdapter
             offscreenPageLimit = 1 //
             getChildAt(0).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
-            registerOnPageChangeCallback(object: ViewPager2.OnPageChangeCallback(){
-                override fun onPageSelected(position: Int) {
-                    super.onPageSelected(position)
-                    sliderImageHandler.removeCallbacks(sliderImageRunnable)
-                    sliderImageHandler.postDelayed(sliderImageRunnable, 2000)
-                }
-            })
         }
 
         binding.buyButton.setOnClickListener {

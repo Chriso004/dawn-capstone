@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/drawable/image_box.xml" value="0.2005" />
         <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/drawable/rectangle_cody_item.xml" value="0.2015" />
         <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/drawable/rectangle_cody_item_2.xml" value="0.2015" />
         <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/drawable/rectangle_cody_item_selected.xml" value="0.2015" />
@@ -14,22 +15,32 @@
         <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/drawable/register_button.xml" value="0.2015" />
         <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/drawable/selector_radio_button.xml" value="0.1995" />
         <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/drawable/tab_selector.xml" value="0.1995" />
+        <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/drawable/top_radius_white_background.xml" value="0.213" />
         <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/layout/activity_avatar.xml" value="0.33" />
         <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/layout/activity_login.xml" value="0.36614583333333334" />
-        <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/layout/best_product_item.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/layout/brand_cody_rank_item.xml" value="0.36096014492753625" />
         <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/layout/cody_item.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/layout/detail_cody_item.xml" value="0.36096014492753625" />
+        <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/layout/detail_content_item.xml" value="0.33" />
         <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/layout/fragment_age_option.xml" value="0.33" />
         <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/layout/fragment_avatar.xml" value="0.33" />
+        <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/layout/fragment_avatar_bottom_sheet.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/layout/fragment_avatar_bottom_sheet_dialog.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/layout/fragment_best.xml" value="0.33" />
         <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/layout/fragment_brand.xml" value="0.33" />
         <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/layout/fragment_cody.xml" value="0.33" />
+        <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/layout/fragment_day_switch_option.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/layout/fragment_event.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/layout/fragment_like_cody.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/layout/fragment_like_top_bar.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/layout/fragment_main_top.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/layout/fragment_my_page.xml" value="0.33" />
         <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/layout/fragment_my_page_top_bar.xml" value="0.33" />
+        <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/layout/fragment_new_product.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/layout/fragment_product_detail.xml" value="0.33" />
         <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/layout/fragment_recommend.xml" value="0.33" />
         <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/layout/fragment_sale.xml" value="0.17806484295845998" />
         <entry key="..\:/Users/dldms/Desktop/myApplications/DawnProject/app/src/main/res/layout/fragment_today_sale.xml" value="0.33" />
@@ -48,8 +59,6 @@
         <entry key="app/src/main/res/drawable/rectangle_dawn_color.xml" value="0.1285" />
         <entry key="app/src/main/res/drawable/rectangle_line.xml" value="0.143" />
         <entry key="app/src/main/res/drawable/rectangle_line_D3D3D3.xml" value="0.1365" />
-        <entry key="app/src/main/res/drawable/rectangle_line_d3d3d3.xml" value="0.222" />
-        <entry key="app/src/main/res/drawable/rectangle_line_dawn.xml" value="0.173" />
         <entry key="app/src/main/res/drawable/rectangle_white.xml" value="0.143" />
         <entry key="app/src/main/res/drawable/selector_checkbox.xml" value="0.1285" />
         <entry key="app/src/main/res/drawable/selector_like.xml" value="0.1285" />
@@ -59,7 +68,7 @@
         <entry key="app/src/main/res/drawable/selector_thumb.xml" value="0.1285" />
         <entry key="app/src/main/res/layout/activity_avatar.xml" value="0.2536231884057971" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.2569905598958333" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2239044189453125" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.24169616699218752" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.25173802413339674" />
         <entry key="app/src/main/res/layout/activity_register_main.xml" value="0.23783569335937502" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.3098958333333333" />
@@ -85,7 +94,6 @@
         <entry key="app/src/main/res/layout/fragment_my_page.xml" value="0.22568359375000008" />
         <entry key="app/src/main/res/layout/fragment_my_page_top_bar.xml" value="0.1766304347826087" />
         <entry key="app/src/main/res/layout/fragment_new_product.xml" value="0.28072916666666664" />
-        <entry key="app/src/main/res/layout/fragment_product_detail.xml" value="0.2909095874731092" />
         <entry key="app/src/main/res/layout/fragment_recommend.xml" value="0.2169811320754717" />
         <entry key="app/src/main/res/layout/fragment_sale.xml" value="0.21282943809050223" />
         <entry key="app/src/main/res/layout/fragment_shop.xml" value="0.28072916666666664" />
@@ -103,8 +111,6 @@
         <entry key="app/src/main/res/layout/sale_banner_item.xml" value="0.259722900390625" />
         <entry key="app/src/main/res/layout/test.xml" value="0.22305094401041664" />
         <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.3098958333333333" />
-        <entry key="app/src/main/res/xml/activity_main_scene_bottom_navigation.xml" value="0.2151268115942029" />
-        <entry key="app/src/main/res/xml/activity_main_scene_top_tab.xml" value="0.2151268115942029" />
       </map>
     </option>
   </component>

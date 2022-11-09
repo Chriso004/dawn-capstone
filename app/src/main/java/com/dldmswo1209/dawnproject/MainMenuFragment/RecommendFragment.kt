@@ -38,6 +38,7 @@ class RecommendFragment : Fragment(R.layout.fragment_recommend) {
         recommendShopProductListAdapter.submitList(productRankList)
         moreRecommendAdapter.submitList(productRankList)
 
+
         binding.recommendBrandRecyclerView.adapter = recommendBrandListAdapter
         binding.recommendBrandProductRecyclerView.adapter = recommendBrandProductListAdapter
         binding.recommendShopRecyclerView.adapter = recommendShopListAdapter

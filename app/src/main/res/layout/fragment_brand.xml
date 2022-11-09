@@ -6,14 +6,139 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainMenuFragment.HomeFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="브랜드"
-        android:textSize="50sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/brandViewPager"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <HorizontalScrollView
+                android:id="@+id/menuScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/brandViewPager"
+                android:paddingStart="22dp"
+                android:paddingTop="27dp"
+                android:paddingBottom="27dp"
+                android:paddingEnd="22dp"
+                android:scrollbars="none">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+                        android:id="@+id/menuAll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/menu_all"
+                        android:layout_marginEnd="29dp"/>
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+                        android:id="@+id/menuTop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/menu_top"
+                        android:layout_marginEnd="29dp"/>
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+                        android:id="@+id/menuBottom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/menu_bottom"
+                        android:layout_marginEnd="29dp"/>
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+                        android:id="@+id/menuOuter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/menu_bottom"
+                        android:layout_marginEnd="29dp"/>
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+                        android:id="@+id/menuShoes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/menu_bottom"
+                        android:layout_marginEnd="29dp"/>
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+                        android:id="@+id/menuSkirt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/menu_bottom"
+                        android:layout_marginEnd="29dp"/>
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+                        android:id="@+id/menuOnePiece"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/menu_bottom"
+                        android:layout_marginEnd="29dp"/>
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+                        android:id="@+id/menuBackpack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/menu_bottom"
+                        android:layout_marginEnd="29dp"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </HorizontalScrollView>
+            <TextView
+                android:id="@+id/title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="단풍이 기다려지는 코디"
+                android:textColor="@color/titleColor_black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/menuScrollView"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="15dp"/>
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/title1"
+                app:layout_constraintBottom_toBottomOf="@id/title1"
+                app:layout_constraintStart_toEndOf="@id/title1"
+                android:src="@drawable/maple"
+                android:layout_marginStart="3dp"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/brandCodyRankLookDetailButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/title1"
+                app:layout_constraintBottom_toBottomOf="@id/title1"
+                android:layout_marginEnd="15dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="더보기"
+                    android:textSize="12sp"
+                    android:textColor="@color/titleColor_black" />
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/chevron_right"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+            
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/firstRecyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/title1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp"/>
+            
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

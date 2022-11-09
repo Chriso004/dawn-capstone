@@ -42,11 +42,17 @@ val bannerImages = mutableListOf(
     R.drawable.test_ad2,
     R.drawable.test_ad3
 )
+val bannerImages3 = mutableListOf(
+    R.drawable.banner1,
+    R.drawable.banner2,
+    R.drawable.banner3
+)
+
+
 val bannerImages2 = mutableListOf(
     BannerItem(R.drawable.test_ad1),
     BannerItem(R.drawable.test_ad2),
     BannerItem(R.drawable.test_ad3)
-
 )
 
 val saleItems1 = mutableListOf(
@@ -111,3 +117,4 @@ val detailImage = mutableListOf(
     R.drawable.detail_img_4,
     R.drawable.detail_img_5,
 )
+
