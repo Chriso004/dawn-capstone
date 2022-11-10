@@ -1,5 +1,6 @@
 package com.dldmswo1209.dawnproject
 
+import android.graphics.Paint
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -8,6 +9,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.dldmswo1209.dawnproject.adapter.*
@@ -30,6 +33,8 @@ class ProductDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.originalPriceTextView.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
+
         binding.backButton.setOnClickListener {
             (activity as MainActivity).mainFragmentReplace((activity as MainActivity).previousFragment)
         }
@@ -39,15 +44,23 @@ class ProductDetailFragment : Fragment() {
         val contentAdapter = DetailContentAdapter()
         val recommendAdapter = ProductRankListAdapter{}
         val recommendAdapter2 = ProductRankListAdapter{}
+        val hotProductAdapter = ProductRankListAdapter{}
         codyAdapter.submitList(codyRankList)
         contentAdapter.submitList(detailImage)
         recommendAdapter.submitList(productRankList)
         recommendAdapter2.submitList(productRankList)
+        hotProductAdapter.submitList(productRankList)
 
         binding.codyRecyclerView.adapter = codyAdapter
         binding.ContentImageRecyclerView.adapter = contentAdapter
         binding.recommendRecyclerView.adapter = recommendAdapter
         binding.recommendRecyclerView2.adapter = recommendAdapter2
+
+        val gridLayoutManager1 = GridLayoutManager(context, 3, LinearLayoutManager.VERTICAL, false)
+        binding.recommendRecyclerView3.apply {
+            adapter = hotProductAdapter
+            layoutManager = gridLayoutManager1
+        }
 
         binding.ImageViewPager.apply {
             adapter = viewPagerAdapter

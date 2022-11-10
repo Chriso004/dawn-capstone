@@ -12,21 +12,11 @@ import com.google.android.material.tabs.TabLayout
 
 class MainTopBarFragment : Fragment(R.layout.fragment_top_bar) {
     private lateinit var binding : FragmentTopBarBinding
-    private lateinit var homeFragment: HomeFragment
-    private lateinit var bestFragment: BestFragment
-    private lateinit var recommendFragment: RecommendFragment
-    private lateinit var codyFragment: CodyFragment
-    private lateinit var brandFragment: BrandFragment
-    private lateinit var shopFragment: ShopFragment
-    private lateinit var saleFragment: SaleFragment
-    private lateinit var newProductFragment: NewProductFragment
-    private lateinit var eventFragment: EventFragment
-    private lateinit var storeFragment: StoreFragment
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentTopBarBinding.bind(view)
-        initFragment()
+        (activity as MainActivity).mainFragmentReplace((activity as MainActivity).homeFragment)
         mainTabSelectListener()
 
     }
@@ -35,34 +25,34 @@ class MainTopBarFragment : Fragment(R.layout.fragment_top_bar) {
             override fun onTabSelected(tab: TabLayout.Tab) {
                 when(tab.position){
                     0 ->{
-                        (activity as MainActivity).mainFragmentReplace(homeFragment)
+                        (activity as MainActivity).mainFragmentReplace((activity as MainActivity).homeFragment)
                     }
                     1 ->{
-                        (activity as MainActivity).mainFragmentReplace(bestFragment)
+                        (activity as MainActivity).mainFragmentReplace((activity as MainActivity).bestFragment)
                     }
                     2 ->{
-                        (activity as MainActivity).mainFragmentReplace(recommendFragment)
+                        (activity as MainActivity).mainFragmentReplace((activity as MainActivity).recommendFragment)
                     }
                     3 ->{
-                        (activity as MainActivity).mainFragmentReplace(codyFragment)
+                        (activity as MainActivity).mainFragmentReplace((activity as MainActivity).codyFragment)
                     }
                     4 ->{
-                        (activity as MainActivity).mainFragmentReplace(brandFragment)
+                        (activity as MainActivity).mainFragmentReplace((activity as MainActivity).brandFragment)
                     }
                     5 ->{
-                        (activity as MainActivity).mainFragmentReplace(shopFragment)
+                        (activity as MainActivity).mainFragmentReplace((activity as MainActivity).shopFragment)
                     }
                     6 ->{
-                        (activity as MainActivity).mainFragmentReplace(saleFragment)
+                        (activity as MainActivity).mainFragmentReplace((activity as MainActivity).saleFragment)
                     }
                     7 -> {
-                        (activity as MainActivity).mainFragmentReplace(newProductFragment)
+                        (activity as MainActivity).mainFragmentReplace((activity as MainActivity).newProductFragment)
                     }
                     8 ->{
-                        (activity as MainActivity).mainFragmentReplace(eventFragment)
+                        (activity as MainActivity).mainFragmentReplace((activity as MainActivity).eventFragment)
                     }
                     9 ->{
-                        (activity as MainActivity).mainFragmentReplace(storeFragment)
+                        (activity as MainActivity).mainFragmentReplace((activity as MainActivity).storeFragment)
                     }
 
                 }
@@ -72,25 +62,7 @@ class MainTopBarFragment : Fragment(R.layout.fragment_top_bar) {
             override fun onTabReselected(tab: TabLayout.Tab?) {}
         })
 
-        performClickTab(3)
     }
 
-    fun performClickTab(index: Int){
-
-    }
-    private fun initFragment(){
-        homeFragment = HomeFragment()
-        bestFragment = BestFragment()
-        recommendFragment = RecommendFragment()
-        codyFragment = CodyFragment()
-        brandFragment = BrandFragment()
-        shopFragment = ShopFragment()
-        saleFragment = SaleFragment()
-        newProductFragment = NewProductFragment()
-        eventFragment = EventFragment()
-        storeFragment = StoreFragment()
-
-        (activity as MainActivity).mainFragmentReplace(homeFragment)
-    }
 
 }

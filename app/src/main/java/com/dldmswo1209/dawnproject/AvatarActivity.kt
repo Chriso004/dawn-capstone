@@ -90,7 +90,7 @@ class AvatarActivity : AppCompatActivity() {
         CompletableFuture.allOf(avatar, backdrop)
             .handle<Any?>{ok: Void?, ex: Throwable? ->
                 try{
-                    val modelNode = com.google.ar.sceneform.Node()
+                    val modelNode = Node()
                     modelNode.renderable = avatar.get()
                     modelNode.localScale = Vector3(0.1f, 0.1f, 0.1f)
                     modelNode.localRotation = Quaternion.axisAngle(
