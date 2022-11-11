@@ -5,7 +5,7 @@ const signUp = async (e) => {
 
     const formData = new FormData(e.target);
     const email = formData.get("email");
-    const id = formData.get("id");
+    const id = formData.get("id").toLowerCase();
     const pwd = formData.get("pwd");
     const pwdRep = formData.get("pwd-rep");
     const nickname = formData.get("nickname");
@@ -24,13 +24,18 @@ const signUp = async (e) => {
         nickname: nickname,
         recommend: recommend
     };
-    
-    const response = await axios.post("user/signup", JSON.stringify(data), {
-        headers: {
-            "Content-Type": `application/json`,
-        }
-    });
-    console.log(response);
+
+    try {
+        const response = await axios.post("user/signup", JSON.stringify(data), {
+            headers: {
+                "Content-Type": `application/json`,
+            }
+        });
+        console.log(response);
+    } catch (error) {
+        console.error(error);
+    }
+
 }
 
 signForm.addEventListener("submit", signUp);

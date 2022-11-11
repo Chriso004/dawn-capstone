@@ -1,15 +1,17 @@
 const express = require("express");
 const indexController = require("../controller/index");
 const userController = require("../controller/user");
-const goodsController = require("../controller/goods");
+const productController = require("../controller/product");
 
 const router = express.Router();
 
-router.get("/", indexController.getView);
-router.get("/user", userController.getView);
-router.post("/user/login", userController.doLogin);
-router.post("/user/signup", userController.doSignUp);
-router.get("/goods", goodsController.getGoods);
+router.get("/", indexController.getViewControll);
+router.get("/user", userController.getViewControll);
+router.post("/user/login", userController.doLoginControll);
+router.post("/user/signup", userController.doSignUpControll);
+router.get("/product/all", productController.getProductsControll);
+router.get("/product/image", productController.getProductsImgControll);
+router.post("/product/like", productController.likeControll);
 
 router.get("/test", (req, res) => {
     const response = {
