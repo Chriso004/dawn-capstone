@@ -1,12 +1,22 @@
-const { postLike } = require("../model/product");
 const productModel = require("../model/product");
 
 module.exports = {
-    getProductsControll: async (req, res) => {
+    getProductControll: async (req, res) => {
         try {
-            const response = await productModel.getProducts();
+            const pCode = req.body.pCode;
+            const response = await productModel.getProducts(pCode);
+            
             res.send(response);
-        } catch(error) {
+        } catch (error) {
+            console.error(error);
+        }
+    },
+
+    getAllProductsControll: async (req, res) => {
+        try {
+            const response = await productModel.getAllProducts();
+            res.send(response);
+        } catch (error) {
             console.error(error);
         }
     },
@@ -24,7 +34,7 @@ module.exports = {
         try {
             const existResponse = await productModel.likeExist(data);
 
-            if(existResponse.length === 0) {
+            if (existResponse.length === 0) {
                 const postResponse = await productModel.postLike(data);
                 response = postResponse;
             }
@@ -33,12 +43,19 @@ module.exports = {
                 const deleteResponse = await productModel.deleteLike(lCode);
                 response = deleteResponse;
             }
-        } catch(error) {
+        } catch (error) {
             console.error(error);
         }
-
         res.send(response);
+    },
 
-
+    allLikeControll: async (req, res) => {
+        try {
+            const uCode = req.body.uCode;
+            const response = await productModel.getAllLike(uCode);
+            res.send(response);
+        } catch (error) {
+            console.error(error);
+        }
     }
 };

@@ -9,9 +9,13 @@ router.get("/", indexController.getViewControll);
 router.get("/user", userController.getViewControll);
 router.post("/user/login", userController.doLoginControll);
 router.post("/user/signup", userController.doSignUpControll);
-router.get("/product/all", productController.getProductsControll);
+
+router.get("/product", productController.getProductControll);
+router.get("/product/all", productController.getAllProductsControll);
 router.get("/product/image", productController.getProductsImgControll);
+
 router.post("/product/like", productController.likeControll);
+router.get("/product/like/all", productController.allLikeControll);
 
 router.get("/test", (req, res) => {
     const response = {
