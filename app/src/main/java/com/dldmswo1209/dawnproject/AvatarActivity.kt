@@ -1,14 +1,19 @@
 package com.dldmswo1209.dawnproject
 
 import android.annotation.SuppressLint
-import android.app.Notification
+import android.content.Context
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.util.TypedValue
 import android.view.MotionEvent
+import android.view.View
+import android.widget.LinearLayout
+import androidx.appcompat.app.AppCompatActivity
+import androidx.coordinatorlayout.widget.CoordinatorLayout
 import com.dldmswo1209.dawnproject.databinding.ActivityAvatarBinding
-import com.dldmswo1209.dawnproject.databinding.ActivityMainBinding
+import com.google.android.material.appbar.AppBarLayout
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.ar.sceneform.Node
 import com.google.ar.sceneform.math.Quaternion
 import com.google.ar.sceneform.math.Vector3
@@ -17,8 +22,7 @@ import kotlinx.coroutines.*
 import java.util.concurrent.CompletableFuture
 import java.util.concurrent.ExecutionException
 import kotlin.math.abs
-import kotlin.math.cos
-import kotlin.math.sin
+
 
 class AvatarActivity : AppCompatActivity() {
     private var downX = 0f
@@ -27,15 +31,17 @@ class AvatarActivity : AppCompatActivity() {
     private val binding by lazy {
         ActivityAvatarBinding.inflate(layoutInflater)
     }
+
     private val nodeList = mutableListOf<Node>()
 
+    @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
         binding.avatarSceneView.setTransparent(true)
 
-        loadModel("models/hide_test.glb")
+        loadModel("models/basic1.glb")
 
         binding.button.setOnClickListener {
             CoroutineScope(Dispatchers.Main).launch {
@@ -65,6 +71,54 @@ class AvatarActivity : AppCompatActivity() {
                 }
             }
         }
+
+        val behavior = BottomSheetBehavior.from(binding.persistentBottomSheet)
+        behavior.addBottomSheetCallback(object: BottomSheetBehavior.BottomSheetCallback(){
+            override fun onStateChanged(bottomSheet: View, newState: Int) {
+                when(newState) {
+                    BottomSheetBehavior.STATE_COLLAPSED-> {
+                        val bottomMargin = dpToPx(this@AvatarActivity, 100f).toInt()
+
+                        val margin =
+                            CoordinatorLayout.LayoutParams(CoordinatorLayout.LayoutParams.MATCH_PARENT,
+                                CoordinatorLayout.LayoutParams.MATCH_PARENT)
+                        margin.setMargins(0, 0, 0, bottomMargin)
+                        binding.avatarSceneView.layoutParams = margin
+
+
+                    }
+
+                    BottomSheetBehavior.STATE_EXPANDED-> {
+
+                        val bottomMargin = dpToPx(this@AvatarActivity, 250f).toInt()
+                        val margin =
+                            CoordinatorLayout.LayoutParams(CoordinatorLayout.LayoutParams.MATCH_PARENT,
+                                CoordinatorLayout.LayoutParams.MATCH_PARENT)
+                        margin.setMargins(0, 0, 0, bottomMargin)
+                        binding.avatarSceneView.layoutParams = margin
+
+                    }
+
+                }
+            }
+
+            override fun onSlide(bottomSheet: View, slideOffset: Float) {
+                Log.d("testt", slideOffset.toString())
+                val bottomMarginFloat = (slideOffset * 150) + 100
+                val bottomMargin = dpToPx(this@AvatarActivity, bottomMarginFloat).toInt()
+
+                val margin =
+                    CoordinatorLayout.LayoutParams(CoordinatorLayout.LayoutParams.MATCH_PARENT,
+                        CoordinatorLayout.LayoutParams.MATCH_PARENT)
+                margin.setMargins(0, 0, 0, bottomMargin)
+                binding.avatarSceneView.layoutParams = margin
+
+            }
+
+        })
+    }
+    fun dpToPx(context: Context, dp: Float): Float {
+        return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, context.resources.displayMetrics)
     }
 
     @SuppressLint("ClickableViewAccessibility")

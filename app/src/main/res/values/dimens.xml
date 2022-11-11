@@ -4,4 +4,6 @@
     <dimen name="pageMargin">100dp</dimen>
     <dimen name="pageWidth">300dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="size_100dp">100dp</dimen>
+    <dimen name="size_250dp">250dp</dimen>
 </resources>
