@@ -90,7 +90,7 @@ class AvatarActivity : AppCompatActivity() {
 
                     BottomSheetBehavior.STATE_EXPANDED-> {
 
-                        val bottomMargin = dpToPx(this@AvatarActivity, 250f).toInt()
+                        val bottomMargin = dpToPx(this@AvatarActivity, 350f).toInt()
                         val margin =
                             CoordinatorLayout.LayoutParams(CoordinatorLayout.LayoutParams.MATCH_PARENT,
                                 CoordinatorLayout.LayoutParams.MATCH_PARENT)
@@ -104,7 +104,7 @@ class AvatarActivity : AppCompatActivity() {
 
             override fun onSlide(bottomSheet: View, slideOffset: Float) {
                 Log.d("testt", slideOffset.toString())
-                val bottomMarginFloat = (slideOffset * 150) + 100
+                val bottomMarginFloat = (slideOffset * 250) + 100
                 val bottomMargin = dpToPx(this@AvatarActivity, bottomMarginFloat).toInt()
 
                 val margin =
