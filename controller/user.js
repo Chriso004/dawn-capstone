@@ -8,29 +8,34 @@ module.exports = {
 
     doLoginCtrl: async (req, res) => {
         try {
-            const response = await userModel.login(req.body.id);
-            const cryptoPwd = await crypto.createHashPassword(req.body.pwd, response[0].salt);
-
-            if (cryptoPwd.password === response[0].유저비밀번호)
-                res.send(response[0].유저식별코드);
-            else
-                res.send(false);
+            const response = await userModel.login(req.body.email);
+            if (response.length !== 0) {
+                const cryptoPwd = await crypto.createHashPassword(req.body.password, response[0].salt);
+                if (cryptoPwd.password === response[0].유저비밀번호)
+                    res.json(response[0].유저식별코드);
+                else
+                    res.json(false);
+            }
+            else res.json(false);
         } catch (error) {
             console.error(error);
-        }
-
+        } 
+        
     },
 
     doSignUpCtrl: async (req, res) => {
-        let result;
+        let result = false;
         try {
-            const cryptoPwd = await crypto.createHashPassword(req.body.pwd);
+            const originPwd = req.body.password;
+            const cryptoPwd = await crypto.createHashPassword(originPwd);
             const data = {
-                id: req.body.id,
+                uid: req.body.uid,
                 pwd: cryptoPwd.password,
                 email: req.body.email,
-                nickname: req.body.nickname,
-                recommend: req.body.recommend,
+                phone: req.body.phone,
+                name: req.body.name,
+                sex: req.body.sex,
+                age: req.body.age,
                 salt: cryptoPwd.salt
             };
 
