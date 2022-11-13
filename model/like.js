@@ -2,7 +2,7 @@ const mysql = require("mysql2");
 const dbConfig = require("../server/config/dbconfig");
 
 module.exports = {
-    getAllProducts: () => {
+    likeExist: (data) => {
         try {
             return new Promise((resolve, reject) => {
                 const pool = mysql.createPool(dbConfig);
@@ -10,14 +10,17 @@ module.exports = {
                 pool.getConnection((error, connection) => {
                     if (error) throw error;
 
-                    const sql = "SELECT * FROM 상품";
-                    connection.query(sql, (error, row) => {
+                    const sql = "SELECT 좋아요분류코드 FROM 상품좋아요 WHERE 유저분류코드 = ? AND 상품분류코드 = ?";
+                    const sql2 = connection.format(sql, data);
+
+                    connection.query(sql2, (error, row) => {
                         if (error)
                             resolve({
                                 errCode: error.code,
                                 errNo: error.errno,
                                 errMsg: error.message
                             });
+                        console.log(sql2);
                         resolve(row);
                     });
                     connection.release();
@@ -28,28 +31,49 @@ module.exports = {
         }
     },
 
-    getProductByCategory: (data) => {
-        try{
+    postLike: (data) => {
+        try {
             return new Promise((resolve, reject) => {
                 const pool = mysql.createPool(dbConfig);
 
                 pool.getConnection((error, connection) => {
-                    if(error) throw error;
+                    if (error) throw error;
 
-                    const sql = "SELECT * FROM 상품 WHERE 상품카테고리 = ?";
-                    connection.query(sql, data, (error, row) => {
-                        if(error) resolve(error);
-                        resolve(row);
+                    const sql = "INSERT INTO 상품좋아요 (유저분류코드, 상품분류코드) VALUE (?)";
+                    connection.query(sql, [data], (error, row) => {
+                        if (error) resolve(error);
+                        resolve("insert complete");
                     });
                     connection.release();
                 });
             });
-        } catch(error) {
+        } catch (error) {
             console.error(error);
         }
     },
 
-    getProductByDetail: (data) => {
+    deleteLike: (data) => {
+        try {
+            return new Promise((resolve, reject) => {
+                const pool = mysql.createPool(dbConfig);
+
+                pool.getConnection((error, connection) => {
+                    if (error) throw error;
+
+                    const sql = "DELETE FROM 상품좋아요 WHERE 좋아요분류코드 = ?";
+                    connection.query(sql, data, (error, row) => {
+                        if (error) resolve(error);
+                        resolve("delete complete");
+                    });
+                    connection.release();
+                });
+            });
+        } catch (error) {
+            console.error(error);
+        }
+    },
+    
+    getAllProductByLike: (data) => {
         try {
             return new Promise((resolve, reject) => {
                 const pool = mysql.createPool(dbConfig);
@@ -57,36 +81,17 @@ module.exports = {
                 pool.getConnection((error, connection) => {
                     if(error) throw error;
 
-                    const sql = "SELECT * FROM 상품 WHERE 상품상세카테고리 = ?";
-                    connection.query(sql, data, (error, row) => {
-                        if(error) resolve(error);
-                        resolve(row);
-                    });
-                });
-            });
-        } catch(error) {
-            console.error(error);
-        }
-    },
-
-    getProducts: (data) => {
-        try {
-            return new Promise((resolve, reject) => {
-                const pool = mysql.createPool(dbConfig);
-
-                pool.getConnection((error, connection) => {
-                    if(error) throw error;
-
-                    const sql = "SELECT * FROM 상품 WHERE 상품분류코드 = ?";
+                    const sql = "SELECT * FROM 상품좋아요 WHERE 유저분류코드 = ?";
                     connection.query(sql, data, (error, row) => {
                         if(error) resolve(error);
                         resolve(row);
                     });
                     connection.release();
-                });
+                })
             });
         } catch(error) {
             console.error(error);
         }
     },
 };
+

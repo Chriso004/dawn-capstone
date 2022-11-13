@@ -2,11 +2,11 @@ const userModel = require("../model/user");
 const crypto = require("../server/services/crypto");
 
 module.exports = {
-    getViewControll: (req, res) => {
+    getViewCtrl: (req, res) => {
         res.render("signup.html");
     },
 
-    doLoginControll: async (req, res) => {
+    doLoginCtrl: async (req, res) => {
         try {
             const response = await userModel.login(req.body.id);
             const cryptoPwd = await crypto.createHashPassword(req.body.pwd, response[0].salt);
@@ -21,7 +21,7 @@ module.exports = {
 
     },
 
-    doSignUpControll: async (req, res) => {
+    doSignUpCtrl: async (req, res) => {
         let result;
         try {
             const cryptoPwd = await crypto.createHashPassword(req.body.pwd);

@@ -1,5 +1,5 @@
 module.exports = {
-    getViewControll: (req, res) => {
+    getViewCtrl: (req, res) => {
         res.render("index.html");
     }
 }
