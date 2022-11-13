@@ -206,7 +206,7 @@ POST 요청 시 상품 이미지를 받을 수 있음
     "fileName": "셔츠1.jpeg" //상품 이미지 명
 }
 ```
-
+---
 ### 2. 상품 좋아요
 ### 2.1. 상품 좋아요 추가 삭제
 **url/product/like**
@@ -259,3 +259,51 @@ POST 요청 시 유저 코드를 전송하면 해당 유저가 좋아요한 모�
 ]
 ```
 여기서 받은 상품 분류 코드로 다시 서버에 요청하여 상품 상세정보를 받으면 됨.
+
+---
+### 3. 유저 정보 관리
+### 3.1. 회원가입
+**url/user/signup**
+POST 요청을 보내면 회원가입 요청이 가능함.
+요청 시 JSON 형식으로 유저 데이터 전송 시 회원가입 가능
+회원가입 성공이 true 반환
+```JSON
+{
+   "uid": 2,
+   "password": "password",
+   "email": "test@test.com",
+   "phone": "010-0000-0000",
+   "name": "의문의 누군가",
+   "sex": "test",
+   "age": "test"
+}
+```
+결과
+```JSON
+true
+```
+### 3.2. 로그인
+**url/user/login**
+POST 요청을 보내면 로그인 요청이 가능함.
+요청 시 JSON 형식으로 유저 데이터 전송 시 로그인 가능
+로그인 성공 여부를 true, false로 반환
+```JSON
+{
+    "email": "test@test.com",
+    "password": "password"
+}
+```
+결과
+```JSON
+true
+```
+```JSON
+{
+    "email": "test@test.com",
+    "password": "pass"
+}
+```
+결과
+```JSON
+false
+```

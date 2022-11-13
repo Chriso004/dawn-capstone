@@ -12,7 +12,7 @@ module.exports = {
             if (response.length !== 0) {
                 const cryptoPwd = await crypto.createHashPassword(req.body.password, response[0].salt);
                 if (cryptoPwd.password === response[0].유저비밀번호)
-                    res.json(response[0].유저식별코드);
+                    res.json(true);
                 else
                     res.json(false);
             }
