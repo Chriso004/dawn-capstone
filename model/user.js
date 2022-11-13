@@ -45,7 +45,7 @@ module.exports = {
                 pool.getConnection((error, connection) => {
                     if (error) throw error;
                     try {
-                        const sql = "INSERT INTO 유저 (유저아이디, 유저비밀번호, 유저이메일, 유저전화번호, 유저이름, 유저성별, 유저나이, salt) VALUE (?)";
+                        const sql = "INSERT INTO 유저 (유저분류코드, 유저비밀번호, 유저이메일, 유저전화번호, 유저이름, 유저성별, 유저나이, salt) VALUE (?)";
                         connection.query(sql, [value], (error, result) => {
                             if (error) {
                                 resolve({
