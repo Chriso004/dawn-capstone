@@ -9,14 +9,15 @@ const router = express.Router();
 router.get("/", indexController.getViewCtrl);
 
 /* 유저 컨트롤러 */
-router.get("/user", userController.getViewCtrl);
+router.get("/user", userController.getUserCtrl)
 router.post("/user/login", userController.doLoginCtrl);
 router.post("/user/signup", userController.doSignUpCtrl);
+
 
 /* 상품 컨트롤러 */
 router.post("/product", productController.getProductCtrl);
 router.get("/product/all", productController.getAllProductsCtrl);
-router.post("/product/image", productController.getProductsImgCtrl);
+router.get("/product/image/:id", productController.getProductsImgCtrl);
 router.post("/product/category", productController.getProductByCategoryCtrl);
 router.post("/product/category/detail", productController.getProductByDetailCtrl);
 

@@ -45,7 +45,7 @@ module.exports = {
 
     getProductsImgCtrl: async (req, res) => {
         try {
-            res.sendFile(req.body.fileName, { root: "public/img" });
+            res.sendFile(req.params.id, { root: "public/img" });
         } catch(error) {
             console.error(error);
         }

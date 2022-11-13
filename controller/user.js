@@ -2,8 +2,24 @@ const userModel = require("../model/user");
 const crypto = require("../server/services/crypto");
 
 module.exports = {
-    getViewCtrl: (req, res) => {
-        res.render("signup.html");
+    getUserCtrl: async (req, res) => {
+        try {
+            const uid = req.query.uid;
+            const response = await userModel.getUser(uid);
+            const t = response[0];
+            const data = {
+                uid: t.유저분류코드,
+                password: t.유저비밀번호,
+                email: t.유저이메일,
+                phone: t.유저전화번호,
+                name: t.유저이름,
+                sex: t.유저성별,
+                age: t.유저나이
+            };
+            res.json(data);
+        } catch(error) {
+            console.error(error);
+        }
     },
 
     doLoginCtrl: async (req, res) => {

@@ -34,6 +34,26 @@ module.exports = {
         }
     },
 
+    getUser: (data) => {
+        try {
+            return new Promise((resolve, reject) => {
+                const pool = mysql.createPool(dbConfig);
+
+                pool.getConnection((error, connection) => {
+                    if(error) throw error;
+
+                    const sql = "SELECT * FROM 유저 WHERE 유저분류코드 = ?";
+                    connection.query(sql, data, (error, row) => {
+                        if(error) resolve(error);
+                        resolve(row);
+                    });
+                });
+            });
+        } catch(error) {
+            console.error(error);
+        }
+    },
+
     signUp: (data) => {
         const value = [];
         for (k in data)
