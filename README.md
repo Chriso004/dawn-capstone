@@ -215,7 +215,7 @@ POST 요청 시 상품이 좋아요 리스트에 추가 제거가 됨.
 좋아요 목록에 존재하지 않는다면 좋아요 리스트에 추가
 ```json
 {
-    "uCode": 2, //유저분류코드
+    "uCode": "ntbqaiSFvqb5QinplDurEGwRSBE3", //유저분류코드
     "pCode": 56 //상품분류코드
 }
 ```
@@ -233,27 +233,27 @@ POST 요청 시 유저 코드를 전송하면 해당 유저가 좋아요한 모�
 [
     {
         "좋아요분류코드": 5,
-        "유저분류코드": 1,
+        "유저분류코드": "ntbqaiSFvqb5QinplDurEGwRSBE3",
         "상품분류코드": 53
     },
     {
         "좋아요분류코드": 7,
-        "유저분류코드": 1,
+        "유저분류코드": "ntbqaiSFvqb5QinplDurEGwRSBE3",
         "상품분류코드": 54
     },
     {
         "좋아요분류코드": 8,
-        "유저분류코드": 1,
+        "유저분류코드": "ntbqaiSFvqb5QinplDurEGwRSBE3",
         "상품분류코드": 55
     },
     {
         "좋아요분류코드": 9,
-        "유저분류코드": 1,
+        "유저분류코드": "ntbqaiSFvqb5QinplDurEGwRSBE3",
         "상품분류코드": 56
     },
     {
         "좋아요분류코드": 10,
-        "유저분류코드": 1,
+        "유저분류코드": "ntbqaiSFvqb5QinplDurEGwRSBE3",
         "상품분류코드": 57
     }
 ]
