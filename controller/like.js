@@ -1,4 +1,5 @@
 const likeModel = require("../model/like");
+const productModel = require("../model/product");
 
 module.exports = {
     likeCtrl: async (req, res) => {
@@ -28,7 +29,9 @@ module.exports = {
     getAllProductByLikeCtrl: async (req, res) => {
         try {
             const uCode = req.body.uCode;
-            const response = await likeModel.getAllProductByLike(uCode);
+            const pIdResponse = await likeModel.getAllProductByLike(uCode);
+            const response = await productModel.getProductByArr(pIdResponse);
+
             res.json(response);
         } catch (error) {
             console.error(error);

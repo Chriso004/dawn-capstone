@@ -4,7 +4,7 @@ module.exports = {
     getProductCtrl: async (req, res) => {
         try {
             const pCode = req.body.pCode;
-            const response = await productModel.getProducts(pCode);
+            const response = await productModel.getProduct(pCode);
             
             res.json(response);
         } catch (error) {
@@ -27,7 +27,7 @@ module.exports = {
         try {
             const detail = req.body.detail;
             const response = await productModel.getProductByDetail(detail);
-
+            
             res.json(response);
         } catch(error) {
             console.error(error);

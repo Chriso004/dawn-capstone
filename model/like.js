@@ -81,7 +81,7 @@ module.exports = {
                 pool.getConnection((error, connection) => {
                     if(error) throw error;
 
-                    const sql = "SELECT * FROM 상품좋아요 WHERE 유저분류코드 = ?";
+                    const sql = "SELECT 상품분류코드 FROM 상품좋아요 WHERE 유저분류코드 = ?";
                     connection.query(sql, data, (error, row) => {
                         if(error) resolve(error);
                         resolve(row);

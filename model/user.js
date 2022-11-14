@@ -13,12 +13,7 @@ module.exports = {
                     try {
                         const sql = "SELECT 유저이메일 FROM 유저 WHERE 유저이메일 = ?";
                         connection.query(sql, data, (error, row) => {
-                            if (error)
-                                resolve({
-                                    errCode: error.code,
-                                    errNo: error.errno,
-                                    errMsg: error.message
-                                });
+                            if (error) resolve(error);
                             console.log(row.length);
                             if (row.length === 0) resolve(false);
                             else resolve(true);
@@ -47,6 +42,7 @@ module.exports = {
                         if(error) resolve(error);
                         resolve(row);
                     });
+                    connection.release();
                 });
             });
         } catch(error) {
@@ -67,13 +63,7 @@ module.exports = {
                     try {
                         const sql = "INSERT INTO 유저 (유저분류코드, 유저비밀번호, 유저이메일, 유저전화번호, 유저이름, 유저성별, 유저나이, salt) VALUE (?)";
                         connection.query(sql, [value], (error, result) => {
-                            if (error) {
-                                resolve({
-                                    errCode: error.code,
-                                    errNo: error.errno,
-                                    errMsg: error.message
-                                });
-                            }
+                            if (error) resolve(error);
                             resolve(true);
                         });
                         connection.release();
@@ -97,12 +87,7 @@ module.exports = {
 
                     const sql = "SELECT 유저분류코드, 유저비밀번호, salt FROM 유저 WHERE 유저이메일 = ?";
                     connection.query(sql, data, (error, row) => {
-                        if (error)
-                            resolve({
-                                errCode: error.code,
-                                errNo: error.errno,
-                                errMsg: error.message
-                            });
+                        if (error) resolve(error);
                         resolve(row);
                     });
                     connection.release();

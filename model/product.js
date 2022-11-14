@@ -12,12 +12,7 @@ module.exports = {
 
                     const sql = "SELECT * FROM 상품";
                     connection.query(sql, (error, row) => {
-                        if (error)
-                            resolve({
-                                errCode: error.code,
-                                errNo: error.errno,
-                                errMsg: error.message
-                            });
+                        if (error) resolve(error);
                         resolve(row);
                     });
                     connection.release();
@@ -62,6 +57,7 @@ module.exports = {
                         if(error) resolve(error);
                         resolve(row);
                     });
+                    connection.release();
                 });
             });
         } catch(error) {
@@ -69,7 +65,7 @@ module.exports = {
         }
     },
 
-    getProducts: (data) => {
+    getProduct: (data) => {
         try {
             return new Promise((resolve, reject) => {
                 const pool = mysql.createPool(dbConfig);
@@ -89,4 +85,28 @@ module.exports = {
             console.error(error);
         }
     },
+    
+    getProductByArr: (data) => {
+        try {
+            const pCodeArr = [];
+            for(k in data)
+                pCodeArr.push(data[k].상품분류코드);
+            return new Promise((resolve, reject) => {
+                const pool = mysql.createPool(dbConfig);
+
+                pool.getConnection((error, connection) => {
+                    if(error) throw error;
+
+                    const sql = "SELECT * FROM 상품 WHERE 상품분류코드 in (?)";
+                    connection.query(sql, [pCodeArr], (error, row) => {
+                        if(error) resolve(error);
+                        resolve(row);
+                    });
+                    connection.release();
+                });
+            });
+        } catch(error) {
+            console.error(error);
+        }
+    }
 };

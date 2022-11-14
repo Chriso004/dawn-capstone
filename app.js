@@ -15,10 +15,8 @@ const routes = require("./routes/routes.js");
 /* 서버 미들웨어 설정 */
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use(morgan("dev"));
+app.use(morgan("common"));
 
 /* port설정 */
 app.set("port", process.env.PORT || 8080);
