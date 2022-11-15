@@ -1,12 +1,9 @@
-const mysql = require("mysql2");
-const dbConfig = require("../server/config/dbconfig");
+const pool = require("../server/config/dbconfig");
 
 module.exports = {
     getAllProducts: () => {
         try {
             return new Promise((resolve, reject) => {
-                const pool = mysql.createPool(dbConfig);
-
                 pool.getConnection((error, connection) => {
                     if (error) throw error;
 
@@ -26,8 +23,6 @@ module.exports = {
     getProductByCategory: (data) => {
         try{
             return new Promise((resolve, reject) => {
-                const pool = mysql.createPool(dbConfig);
-
                 pool.getConnection((error, connection) => {
                     if(error) throw error;
 
@@ -47,8 +42,6 @@ module.exports = {
     getProductByDetail: (data) => {
         try {
             return new Promise((resolve, reject) => {
-                const pool = mysql.createPool(dbConfig);
-
                 pool.getConnection((error, connection) => {
                     if(error) throw error;
 
@@ -68,8 +61,6 @@ module.exports = {
     getProduct: (data) => {
         try {
             return new Promise((resolve, reject) => {
-                const pool = mysql.createPool(dbConfig);
-
                 pool.getConnection((error, connection) => {
                     if(error) throw error;
 
@@ -95,8 +86,6 @@ module.exports = {
                 return pCodeArr;
             }
             return new Promise((resolve, reject) => {
-                const pool = mysql.createPool(dbConfig);
-
                 pool.getConnection((error, connection) => {
                     if(error) throw error;
 

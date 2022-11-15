@@ -1,18 +1,14 @@
-const mysql = require("mysql2");
-const dbConfig = require("../server/config/dbconfig");
+const pool = require("../server/config/dbconfig");
 
 module.exports = {
     likeExist: (data) => {
         try {
             return new Promise((resolve, reject) => {
-                const pool = mysql.createPool(dbConfig);
-
                 pool.getConnection((error, connection) => {
                     if (error) throw error;
 
                     const sql = "SELECT 좋아요분류코드 FROM 상품좋아요 WHERE 유저분류코드 = ? AND 상품분류코드 = ?";
                     const sql2 = connection.format(sql, data);
-
                     connection.query(sql2, (error, row) => {
                         connection.release();
                         if (error) reject(error);
@@ -28,8 +24,6 @@ module.exports = {
     postLike: (data) => {
         try {
             return new Promise((resolve, reject) => {
-                const pool = mysql.createPool(dbConfig);
-
                 pool.getConnection((error, connection) => {
                     if (error) throw error;
 
@@ -49,8 +43,6 @@ module.exports = {
     deleteLike: (data) => {
         try {
             return new Promise((resolve, reject) => {
-                const pool = mysql.createPool(dbConfig);
-
                 pool.getConnection((error, connection) => {
                     if (error) throw error;
 
@@ -70,8 +62,6 @@ module.exports = {
     getAllProductByLike: (data) => {
         try {
             return new Promise((resolve, reject) => {
-                const pool = mysql.createPool(dbConfig);
-
                 pool.getConnection((error, connection) => {
                     if(error) throw error;
 

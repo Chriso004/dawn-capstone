@@ -1,12 +1,9 @@
-const mysql = require("mysql2");
-const dbConfig = require("../server/config/dbconfig");
+const pool = require("../server/config/dbconfig");
 
 module.exports = {
     isExist: (data) => {
         try {
             return new Promise((resolve, reject) => {
-                const pool = mysql.createPool(dbConfig);
-
                 pool.getConnection((error, connection) => {
                     if (error) throw error;
 
@@ -31,8 +28,6 @@ module.exports = {
     getUser: (data) => {
         try {
             return new Promise((resolve, reject) => {
-                const pool = mysql.createPool(dbConfig);
-
                 pool.getConnection((error, connection) => {
                     if(error) throw error;
 
@@ -55,8 +50,6 @@ module.exports = {
             value.push(data[k]);
         try {
             return new Promise((resolve, reject) => {
-                const pool = mysql.createPool(dbConfig);
-
                 pool.getConnection((error, connection) => {
                     if (error) throw error;
                     try {
@@ -79,8 +72,6 @@ module.exports = {
     login: (data) => {
         try {
             return new Promise((resolve, reject) => {
-                const pool = mysql.createPool(dbConfig);
-
                 pool.getConnection((error, connection) => {
                     if (error) throw error;
 
