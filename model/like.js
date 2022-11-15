@@ -14,13 +14,7 @@ module.exports = {
                     const sql2 = connection.format(sql, data);
 
                     connection.query(sql2, (error, row) => {
-                        if (error)
-                            resolve({
-                                errCode: error.code,
-                                errNo: error.errno,
-                                errMsg: error.message
-                            });
-                        console.log(sql2);
+                        if (error) resolve(error);
                         resolve(row);
                     });
                     connection.release();
