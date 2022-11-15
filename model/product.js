@@ -12,10 +12,10 @@ module.exports = {
 
                     const sql = "SELECT * FROM 상품";
                     connection.query(sql, (error, row) => {
-                        if (error) resolve(error);
+                        connection.release();
+                        if (error) reject(error);
                         resolve(row);
                     });
-                    connection.release();
                 });
             });
         } catch (error) {
@@ -33,10 +33,10 @@ module.exports = {
 
                     const sql = "SELECT * FROM 상품 WHERE 상품카테고리 = ?";
                     connection.query(sql, data, (error, row) => {
-                        if(error) resolve(error);
+                        connection.release();
+                        if(error) reject(error);
                         resolve(row);
                     });
-                    connection.release();
                 });
             });
         } catch(error) {
@@ -54,10 +54,10 @@ module.exports = {
 
                     const sql = "SELECT * FROM 상품 WHERE 상품상세카테고리 = ?";
                     connection.query(sql, data, (error, row) => {
-                        if(error) resolve(error);
+                        connection.release();
+                        if(error) reject(error);
                         resolve(row);
                     });
-                    connection.release();
                 });
             });
         } catch(error) {
@@ -75,10 +75,10 @@ module.exports = {
 
                     const sql = "SELECT * FROM 상품 WHERE 상품분류코드 = ?";
                     connection.query(sql, data, (error, row) => {
-                        if(error) resolve(error);
+                        connection.release();
+                        if(error) reject(error);
                         resolve(row);
                     });
-                    connection.release();
                 });
             });
         } catch(error) {
@@ -91,6 +91,9 @@ module.exports = {
             const pCodeArr = [];
             for(k in data)
                 pCodeArr.push(data[k].상품분류코드);
+            if(pCodeArr.length === 0) {
+                return pCodeArr;
+            }
             return new Promise((resolve, reject) => {
                 const pool = mysql.createPool(dbConfig);
 
@@ -99,10 +102,10 @@ module.exports = {
 
                     const sql = "SELECT * FROM 상품 WHERE 상품분류코드 in (?)";
                     connection.query(sql, [pCodeArr], (error, row) => {
-                        if(error) resolve(error);
+                        connection.release();
+                        if(error) reject(error);
                         resolve(row);
                     });
-                    connection.release();
                 });
             });
         } catch(error) {

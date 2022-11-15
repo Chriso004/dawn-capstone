@@ -14,10 +14,10 @@ module.exports = {
                     const sql2 = connection.format(sql, data);
 
                     connection.query(sql2, (error, row) => {
-                        if (error) resolve(error);
+                        connection.release();
+                        if (error) reject(error);
                         resolve(row);
                     });
-                    connection.release();
                 });
             });
         } catch (error) {
@@ -35,10 +35,10 @@ module.exports = {
 
                     const sql = "INSERT INTO 상품좋아요 (유저분류코드, 상품분류코드) VALUE (?)";
                     connection.query(sql, [data], (error, row) => {
-                        if (error) resolve(error);
+                        connection.release();
+                        if (error) reject(error);
                         resolve("insert complete");
                     });
-                    connection.release();
                 });
             });
         } catch (error) {
@@ -56,10 +56,10 @@ module.exports = {
 
                     const sql = "DELETE FROM 상품좋아요 WHERE 좋아요분류코드 = ?";
                     connection.query(sql, data, (error, row) => {
-                        if (error) resolve(error);
+                        connection.release();
+                        if (error) reject(error);
                         resolve("delete complete");
                     });
-                    connection.release();
                 });
             });
         } catch (error) {
@@ -77,10 +77,10 @@ module.exports = {
 
                     const sql = "SELECT 상품분류코드 FROM 상품좋아요 WHERE 유저분류코드 = ?";
                     connection.query(sql, data, (error, row) => {
-                        if(error) resolve(error);
+                        connection.release();
+                        if(error) reject(error);
                         resolve(row);
                     });
-                    connection.release();
                 })
             });
         } catch(error) {
